@@ -1,0 +1,230 @@
+/* =========================
+   Global Styles
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   Header
+========================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header img {
+    width: 40px;
+}
+
+header span {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* =========================
+   Hamburger Button
+========================= */
+#menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+/* =========================
+   Navigation - Small View
+========================= */
+nav {
+    background-color: #0055a5;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+nav ul.open {
+    display: block;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #003366;
+    font-weight: 700;
+}
+
+/* =========================
+   Main Content
+========================= */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+/* =========================
+   Student Photo 
+========================= */
+.student-photo-placeholder {
+    background-color: #e0e0e0;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-photo-placeholder img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .social {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #ffffff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Course Cards
+========================= */
+.course-card {
+    background-color: #ffffff;
+    /* fondo blanco para no completados */
+    border: 1px solid #ccc;
+    /* borde gris claro para diferenciar del fondo */
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* sombra sutil */
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* efecto al pasar el mouse */
+}
+
+.course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   Completed Courses
+========================= */
+.course-card.completed {
+    background-color: #c8e6c9;
+    /* verde suave */
+    border: 1px solid #4caf50;
+    /* borde verde */
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   Filter Buttons
+========================= */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    /* permite que los botones se ajusten en pantallas pequeñas */
+}
+
+.filter-buttons button {
+    background-color: #0055a5;
+    /* azul base */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.filter-buttons button:hover {
+    background-color: #003366;
+    /* azul oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+.filter-buttons button.active {
+    background-color: #006305;
+    /* verde cuando está activo */
+    color: white;
+}

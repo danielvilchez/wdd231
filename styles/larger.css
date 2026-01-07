@@ -1,0 +1,45 @@
+@media (min-width: 768px) {
+
+    #menu {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav li {
+        flex: 1;
+    }
+
+    nav a {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+    }
+
+    .about {
+        grid-column: 1 / 2;
+    }
+
+    .photo {
+        grid-column: 2 / 3;
+    }
+
+    .courses,
+    .projects {
+        grid-column: 1 / -1;
+    }
+}
