@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #333333;
 }
 
 img {
@@ -51,7 +51,7 @@ header span {
 #menu {
     background: none;
     border: none;
-    color: white;
+    color: #ffffff;
     font-size: 1.8rem;
     cursor: pointer;
 }
@@ -86,7 +86,7 @@ nav a {
     display: block;
     padding: 0.75rem;
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -137,7 +137,7 @@ section {
 ========================= */
 footer {
     background-color: #003366;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1rem;
 }
@@ -161,22 +161,20 @@ footer a:hover {
 ========================= */
 .course-card {
     background-color: #ffffff;
-    /* fondo blanco para no completados */
-    border: 1px solid #ccc;
-    /* borde gris claro para diferenciar del fondo */
+    border: 1px solid #cccccc;
     padding: 1rem;
     border-radius: 6px;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    /* sombra sutil */
+    box-shadow: 0 2px 4px #0000000d;
+    /* 5% opacity */
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
-    /* efecto al pasar el mouse */
 }
 
 .course-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #0000001a;
+    /* 10% opacity */
 }
 
 /* =========================
@@ -184,13 +182,11 @@ footer a:hover {
 ========================= */
 .course-card.completed {
     background-color: #c8e6c9;
-    /* verde suave */
     border: 1px solid #4caf50;
-    /* borde verde */
     padding: 1rem;
     border-radius: 6px;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px #0000000d;
 }
 
 /* =========================
@@ -202,13 +198,11 @@ footer a:hover {
     gap: 1rem;
     margin-bottom: 1rem;
     flex-wrap: wrap;
-    /* permite que los botones se ajusten en pantallas pequeñas */
 }
 
 .filter-buttons button {
     background-color: #0055a5;
-    /* azul base */
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -219,12 +213,10 @@ footer a:hover {
 
 .filter-buttons button:hover {
     background-color: #003366;
-    /* azul oscuro al pasar el mouse */
     transform: translateY(-2px);
 }
 
 .filter-buttons button.active {
     background-color: #006305;
-    /* verde cuando está activo */
-    color: white;
+    color: #ffffff;
 }
