@@ -1,0 +1,28 @@
+{
+    "family_name": "Vilchez",
+    "move_in_date": null,
+    "number_of_people": 4,
+    "visited_by_bishopric": false,
+    "family_members": [
+        {
+            "name": "Daniel Vilchez D.",
+            "gender": "Male",
+            "birthdate": "1976-10-12"
+        },
+        {
+            "name": "Jeanette Cardenas",
+            "gender": "Female",
+            "birthdate": "1981-05-29"
+        },
+        {
+            "name": "Belén Vilchez",
+            "gender": "Female",
+            "birthdate": "2009-12-30"
+        },
+        {
+            "name": "Daniel Vilchez",
+            "gender": "Male",
+            "birthdate": "2005-12-09"
+        }
+    ]
+}
