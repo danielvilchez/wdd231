@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamber Directory | Lima</title>
 
-    <!-- Favicon - PRUEBA 1-->
+    <!-- Favicon PRUEBA 2-->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
@@ -32,11 +32,16 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="header-content"> <a href="index.html" class="logo-link"> <img src="images/og_image.png"
-                    alt="Logo of Lima Chamber of Commerce" class="logo">
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="images/og_image.png" alt="Logo of Lima Chamber of Commerce" class="logo">
                 <p class="site-title-name">Lima Chamber of Commerce</p>
-            </a> <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button> <button id="menu-toggle"
-                class="menu-button">☰</button> </div> <!-- Navigation -->
+            </a>
+            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
+            <button id="menu-toggle" class="menu-button" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        </div>
+
+        <!-- Navigation -->
         <nav class="main-nav">
             <ul id="primary-nav">
                 <li><a href="index.html">Home</a></li>
@@ -48,24 +53,31 @@
             </ul>
         </nav>
     </header>
+
     <!-- Main Content -->
     <main>
         <div class="hero">
             <h1>Business Directory</h1>
         </div>
+
         <!-- Directory Options -->
         <section class="directory-options">
-            <div class="view-toggle"> <button id="grid-view" class="active">Grid</button> <button
-                    id="list-view">List</button> </div> <select id="member-filter">
+            <div class="view-toggle">
+                <button id="grid-view" class="active" aria-pressed="true">Grid</button>
+                <button id="list-view" aria-pressed="false">List</button>
+            </div>
+            <select id="member-filter">
                 <option value="all">All Members</option>
                 <option value="gold">Gold</option>
                 <option value="silver">Silver</option>
                 <option value="basic">Basic</option>
             </select>
         </section>
+
         <!-- Member Display -->
         <section id="member-display" class="grid-view"></section>
     </main>
+
     <!-- Footer -->
     <footer>
         <div class="footer-grid">
@@ -76,9 +88,11 @@
                 <p>Email: <a href="mailto:info@limachamber.org">info@limachamber.org</a></p>
                 <p>Phone: +51 1 555-1234</p>
             </div>
-            <div class="footer-social"> <a href="#"><img src="images/youtube.webp" alt="YouTube Profile"></a> <a
-                    href="#"><img src="images/x.webp" alt="Twitter Profile"></a> <a href="#"><img
-                        src="images/linkedin.webp" alt="LinkedIn Profile"></a> </div>
+            <div class="footer-social">
+                <a href="#"><img src="images/youtube.webp" alt="YouTube Profile"></a>
+                <a href="#"><img src="images/x.webp" alt="Twitter Profile"></a>
+                <a href="#"><img src="images/linkedin.webp" alt="LinkedIn Profile"></a>
+            </div>
             <div class="footer-dev-info">
                 <p>&copy; <span id="currentyear"></span> Lima Chamber of Commerce</p>
                 <p>Daniel Vilchez | WDD 231 Class Project</p>
@@ -86,6 +100,7 @@
             </div>
         </div>
     </footer>
+
     <!-- JavaScript -->
     <script src="scripts/directory.js" defer></script>
 </body>

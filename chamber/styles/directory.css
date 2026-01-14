@@ -27,7 +27,6 @@ h4 {
 /* 🔧 CONTRASTE CORREGIDO */
 a {
     color: #1a4d8f;
-    /* azul más oscuro */
     text-decoration: none;
 }
 
@@ -131,7 +130,6 @@ header {
     padding: 0 1rem;
 }
 
-/* 🔧 BOTONES CON MEJOR CONTRASTE */
 .view-toggle button {
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -237,6 +235,10 @@ footer {
 .footer-info a {
     color: #ffffff;
     text-decoration: underline;
+}
+
+.footer-dev-info {
+    min-height: 50px; /* evita CLS al mostrar lastModified */
 }
 
 /* ====================================
