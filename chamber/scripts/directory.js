@@ -1,122 +1,91 @@
-// ===============================
 // DOM Elements
-// ===============================
 const memberDisplay = document.querySelector("#member-display");
 const gridButton = document.querySelector("#grid-view");
 const listButton = document.querySelector("#list-view");
 const filterSelect = document.querySelector("#member-filter");
+const menuButton = document.getElementById("menu-toggle");
+const mainNav = document.querySelector(".main-nav ul");
 
 let allMembers = [];
-let currentView = "grid"; // track current view
+let currentView = "grid";
 
-// ===============================
-// Fetch & Display Members
-// ===============================
+// Load members
 async function loadMembers() {
     try {
         const response = await fetch("data/members.json");
         const members = await response.json();
         allMembers = members;
         displayMembers(members);
-    } catch (error) {
-        console.error("Error loading members:", error);
+    } catch {
         memberDisplay.innerHTML = "<p>Failed to load member data.</p>";
     }
 }
 
-// ===============================
-// Display Members using DocumentFragment
-// ===============================
+// Display members
 function displayMembers(members) {
     memberDisplay.innerHTML = "";
-
     const fragment = document.createDocumentFragment();
 
     members.forEach(member => {
         const card = document.createElement("div");
         card.classList.add("member-card");
-
         if (currentView === "list") card.classList.add("list-item");
-
         if (member.level === 3) card.classList.add("level-gold");
         if (member.level === 2) card.classList.add("level-silver");
         if (member.level === 1) card.classList.add("level-basic");
 
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}" width="100" height="100" loading="lazy">
+            <img src="images/${member.image}" alt="${member.name}" loading="lazy">
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Website</a></p>
+            <p><a href="${member.website}" target="_blank" rel="noopener">Website</a></p>
             <p class="membership-level">Level: ${member.level}</p>
             <p>${member.notes}</p>
         `;
-
         fragment.appendChild(card);
     });
 
     memberDisplay.appendChild(fragment);
 }
 
-// ===============================
-// Grid / List Toggle
-// ===============================
+// Toggle grid/list
 function setView(view) {
     currentView = view;
     memberDisplay.classList.toggle("grid-view", view === "grid");
     memberDisplay.classList.toggle("list-view", view === "list");
-
     gridButton.classList.toggle("active", view === "grid");
     listButton.classList.toggle("active", view === "list");
-
-    // ✅ Actualiza aria-pressed para accesibilidad
     gridButton.setAttribute("aria-pressed", view === "grid");
     listButton.setAttribute("aria-pressed", view === "list");
-
     displayMembers(allMembers);
 }
 
 gridButton.addEventListener("click", () => setView("grid"));
 listButton.addEventListener("click", () => setView("list"));
 
-// ===============================
-// Filter Members
-// ===============================
+// Filter members
 filterSelect.addEventListener("change", () => {
     const value = filterSelect.value;
     const filtered = value === "all"
         ? allMembers
-        : allMembers.filter(m => {
-            return (value === "gold" && m.level === 3) ||
-                (value === "silver" && m.level === 2) ||
-                (value === "basic" && m.level === 1);
-        });
+        : allMembers.filter(m =>
+            (value === "gold" && m.level === 3) ||
+            (value === "silver" && m.level === 2) ||
+            (value === "basic" && m.level === 1)
+        );
     displayMembers(filtered);
 });
 
-// ===============================
-// Footer Dynamic Info
-// ===============================
-function updateFooter() {
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastmodified").textContent = document.lastModified;
-}
-
-// ===============================
-// Init
-// ===============================
-document.addEventListener("DOMContentLoaded", () => {
-    loadMembers();
-    updateFooter();
-});
-
-// ===============================
-// Mobile Navigation Toggle
-// ===============================
-const menuButton = document.getElementById("menu-toggle");
-const mainNav = document.querySelector(".main-nav");
-
+// Menu toggle
 menuButton.addEventListener("click", () => {
     const isOpen = mainNav.classList.toggle("open");
     menuButton.setAttribute("aria-expanded", isOpen);
+});
+
+// Footer dynamic info
+document.addEventListener("DOMContentLoaded", () => {
+    loadMembers();
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
 });
