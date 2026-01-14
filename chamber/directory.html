@@ -12,23 +12,25 @@
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts (Optimized para no bloquear renderizado) -->
+    <!-- Google Fonts (Optimized) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload y carga diferida de la fuente para no bloquear el renderizado -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     </noscript>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/directory.css">
+    <!-- CSS con versionado para forzar actualización cuando haya cambios -->
+    <link rel="stylesheet" href="styles/directory.css?v=1.0">
 
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:title" content="Chamber Directory | Lima, Perú">
     <meta property="og:description"
         content="Find local businesses and resources in Lima, Perú through our Chamber of Commerce directory.">
-    <meta property="og:image" content="images/og_image.png">
+    <!-- Versionado en imágenes para cache -->
+    <meta property="og:image" content="images/og_image.png?v=1.0">
     <meta property="og:url" content="https://danielvilchez.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 </head>
@@ -38,7 +40,7 @@
     <header>
         <div class="header-content">
             <a href="index.html" class="logo-link">
-                <img src="images/og_image.png" alt="Logo of Lima Chamber of Commerce" class="logo">
+                <img src="images/og_image.png?v=1.0" alt="Logo of Lima Chamber of Commerce" class="logo">
                 <p class="site-title-name">Lima Chamber of Commerce</p>
             </a>
             <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
@@ -99,9 +101,10 @@
             </div>
 
             <div class="footer-social">
-                <a href="#"><img src="images/youtube.webp" alt="YouTube Profile"></a>
-                <a href="#"><img src="images/x.webp" alt="Twitter Profile"></a>
-                <a href="#"><img src="images/linkedin.webp" alt="LinkedIn Profile"></a>
+                <!-- Versionado en imágenes para cache -->
+                <a href="#"><img src="images/youtube.webp?v=1.0" alt="YouTube Profile"></a>
+                <a href="#"><img src="images/x.webp?v=1.0" alt="Twitter Profile"></a>
+                <a href="#"><img src="images/linkedin.webp?v=1.0" alt="LinkedIn Profile"></a>
             </div>
 
             <div class="footer-dev-info">
@@ -112,8 +115,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="scripts/directory.js" defer></script>
+    <!-- JavaScript con versionado -->
+    <script src="scripts/directory.js?v=1.0" defer></script>
 </body>
 
 </html>
