@@ -25,7 +25,7 @@ async function loadMembers() {
 }
 
 // ===============================
-// Display Members using DocumentFragment
+// Display Members using DocumentFragment (performance boost)
 // ===============================
 function displayMembers(members) {
     memberDisplay.innerHTML = "";
@@ -43,7 +43,7 @@ function displayMembers(members) {
         if (member.level === 1) card.classList.add("level-basic");
 
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}" width="100" height="100" loading="lazy">
+            <img src="images/${member.image}" alt="${member.name}" loading="lazy">
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
@@ -65,14 +65,8 @@ function setView(view) {
     currentView = view;
     memberDisplay.classList.toggle("grid-view", view === "grid");
     memberDisplay.classList.toggle("list-view", view === "list");
-
     gridButton.classList.toggle("active", view === "grid");
     listButton.classList.toggle("active", view === "list");
-
-    // ✅ accesibilidad
-    gridButton.setAttribute("aria-pressed", view === "grid");
-    listButton.setAttribute("aria-pressed", view === "list");
-
     displayMembers(allMembers);
 }
 

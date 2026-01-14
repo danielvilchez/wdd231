@@ -9,16 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamber Directory | Lima</title>
 
-    <!-- Favicon -->
+    <!-- Favicon - PRUEBA 1-->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts (optimizado para Lighthouse) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/directory.css">
@@ -35,17 +32,12 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="header-content">
-            <a href="index.html" class="logo-link">
-                <img src="images/og_image.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="50" height="50" loading="lazy">
+        <div class="header-content"> <a href="index.html" class="logo-link"> <img src="images/og_image.png"
+                    alt="Logo of Lima Chamber of Commerce" class="logo">
                 <p class="site-title-name">Lima Chamber of Commerce</p>
-            </a>
-            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
-            <button id="menu-toggle" class="menu-button" aria-controls="primary-nav" aria-expanded="false">☰</button>
-        </div>
-
-        <!-- Navigation -->
-        <nav class="main-nav" aria-label="Main Navigation">
+            </a> <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button> <button id="menu-toggle"
+                class="menu-button">☰</button> </div> <!-- Navigation -->
+        <nav class="main-nav">
             <ul id="primary-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -56,51 +48,37 @@
             </ul>
         </nav>
     </header>
-
     <!-- Main Content -->
     <main>
         <div class="hero">
             <h1>Business Directory</h1>
         </div>
-
         <!-- Directory Options -->
         <section class="directory-options">
-            <div class="view-toggle">
-                <button id="grid-view" class="active" aria-pressed="true">Grid</button>
-                <button id="list-view" aria-pressed="false">List</button>
-            </div>
-
-            <!-- Hidden label for accessibility -->
-            <label for="member-filter" class="visually-hidden">Filter members by membership level</label>
-            <select id="member-filter">
+            <div class="view-toggle"> <button id="grid-view" class="active">Grid</button> <button
+                    id="list-view">List</button> </div> <select id="member-filter">
                 <option value="all">All Members</option>
                 <option value="gold">Gold</option>
                 <option value="silver">Silver</option>
                 <option value="basic">Basic</option>
             </select>
         </section>
-
         <!-- Member Display -->
-        <section id="member-display" class="grid-view" aria-live="polite"></section>
+        <section id="member-display" class="grid-view"></section>
     </main>
-
     <!-- Footer -->
     <footer>
         <div class="footer-grid">
             <div class="footer-info">
-                <h2>Lima Chamber of Commerce</h2>
+                <h3>Lima Chamber of Commerce</h3>
                 <p>Av. Ficticia 123, Office 456</p>
                 <p>Lima, Perú</p>
                 <p>Email: <a href="mailto:info@limachamber.org">info@limachamber.org</a></p>
                 <p>Phone: +51 1 555-1234</p>
             </div>
-
-            <div class="footer-social">
-                <a href="#"><img src="images/youtube.webp" alt="YouTube Profile" width="30" height="30" loading="lazy"></a>
-                <a href="#"><img src="images/x.webp" alt="Twitter Profile" width="30" height="30" loading="lazy"></a>
-                <a href="#"><img src="images/linkedin.webp" alt="LinkedIn Profile" width="30" height="30" loading="lazy"></a>
-            </div>
-
+            <div class="footer-social"> <a href="#"><img src="images/youtube.webp" alt="YouTube Profile"></a> <a
+                    href="#"><img src="images/x.webp" alt="Twitter Profile"></a> <a href="#"><img
+                        src="images/linkedin.webp" alt="LinkedIn Profile"></a> </div>
             <div class="footer-dev-info">
                 <p>&copy; <span id="currentyear"></span> Lima Chamber of Commerce</p>
                 <p>Daniel Vilchez | WDD 231 Class Project</p>
@@ -108,7 +86,6 @@
             </div>
         </div>
     </footer>
-
     <!-- JavaScript -->
     <script src="scripts/directory.js" defer></script>
 </body>
