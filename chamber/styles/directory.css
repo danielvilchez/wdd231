@@ -277,3 +277,40 @@ footer {
         justify-content: space-around;
     }
 }
+
+/* ===============================
+   OPTIMIZACIONES PARA CLS Y LCP
+   =============================== */
+
+/* Evitar cambios de layout al cargar imágenes */
+.member-card {
+    min-height: 220px;
+    /* altura reservada para cada card */
+}
+
+/* Footer fijo en altura para evitar cambios de layout */
+footer {
+    min-height: 180px;
+}
+
+/* Reservar espacio para imágenes de miembros */
+.member-card img {
+    width: 100px;
+    /* ajustar según tus imágenes */
+    height: 100px;
+    /* asegurar proporción */
+    object-fit: cover;
+    display: block;
+}
+
+/* Reservar espacio para logo */
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Reservar espacio para iconos sociales */
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
