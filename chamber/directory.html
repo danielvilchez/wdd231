@@ -7,10 +7,9 @@
     <meta name="description"
         content="Directory page of the Chamber of Commerce site for Lima. Find local businesses and resources.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Directory | Lima</title>
 
-    <title>Business Directory | Lima</title>
-
-    <!-- Favicon Prueba-->
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
@@ -19,26 +18,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/directory-extra.css">
 
-    <!-- JS -->
-    <script src="scripts/directory.js" defer></script>
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Chamber Directory | Lima, Perú">
+    <meta property="og:description"
+        content="Find local businesses and resources in Lima, Perú through our Chamber of Commerce directory.">
+    <meta property="og:image" content="images/og_image.png">
+    <meta property="og:url" content="https://danielvilchez.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
-
+    <!-- Header -->
     <header>
         <div class="header-content">
             <a href="index.html" class="logo-link">
-                <img src="images/og_image.png" alt="Logo of Lima Chamber of Commerce" class="logo">
+                <img src="images/og_image.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="50"
+                    height="50" loading="lazy">
                 <p class="site-title-name">Lima Chamber of Commerce</p>
             </a>
             <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
-            <button id="menu-toggle" class="menu-button" aria-label="Toggle Menu" aria-expanded="false">☰</button>
+            <button id="menu-toggle" class="menu-button" aria-controls="primary-nav" aria-expanded="false">☰</button>
         </div>
 
-        <nav class="main-nav">
+        <!-- Navigation -->
+        <nav class="main-nav" aria-label="Main Navigation">
             <ul id="primary-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -50,16 +56,21 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
         <div class="hero">
             <h1>Business Directory</h1>
         </div>
 
+        <!-- Directory Options -->
         <section class="directory-options">
             <div class="view-toggle">
                 <button id="grid-view" class="active" aria-pressed="true">Grid</button>
                 <button id="list-view" aria-pressed="false">List</button>
             </div>
+
+            <!-- Hidden label for select -->
+            <label for="member-filter" class="visually-hidden">Filter members by membership level</label>
             <select id="member-filter">
                 <option value="all">All Members</option>
                 <option value="gold">Gold</option>
@@ -68,31 +79,40 @@
             </select>
         </section>
 
-        <section id="member-display" class="grid-view"></section>
+        <!-- Member Display -->
+        <section id="member-display" class="grid-view" aria-live="polite"></section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-grid">
             <div class="footer-info">
-                <h3>Lima Chamber of Commerce</h3>
+                <h2>Lima Chamber of Commerce</h2>
                 <p>Av. Ficticia 123, Office 456</p>
                 <p>Lima, Perú</p>
                 <p>Email: <a href="mailto:info@limachamber.org">info@limachamber.org</a></p>
                 <p>Phone: +51 1 555-1234</p>
             </div>
+
             <div class="footer-social">
-                <a href="#"><img src="images/youtube.webp" alt="YouTube Profile"></a>
-                <a href="#"><img src="images/x.webp" alt="Twitter Profile"></a>
-                <a href="#"><img src="images/linkedin.webp" alt="LinkedIn Profile"></a>
+                <a href="#"><img src="images/youtube.webp" alt="YouTube Profile" width="30" height="30"
+                        loading="lazy"></a>
+                <a href="#"><img src="images/x.webp" alt="Twitter Profile" width="30" height="30" loading="lazy"></a>
+                <a href="#"><img src="images/linkedin.webp" alt="LinkedIn Profile" width="30" height="30"
+                        loading="lazy"></a>
             </div>
+
             <div class="footer-dev-info">
                 <p>&copy; <span id="currentyear"></span> Lima Chamber of Commerce</p>
                 <p>Daniel Vilchez | WDD 231 Class Project</p>
-                <p>Last Modified: <span id="lastModified"></span></p>
+                <p>Last Modified: <span id="lastmodified"></span></p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/directory-extra.js" defer></script>
 </body>
 
 </html>
