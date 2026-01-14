@@ -28,7 +28,7 @@ async function loadMembers() {
 // Display Members using DocumentFragment (performance boost)
 // ===============================
 function displayMembers(members) {
-    // Remueve solo los cards previos, pero conserva h2
+    // Conserva el h2 invisible para accesibilidad
     const h2 = memberDisplay.querySelector("h2");
     memberDisplay.innerHTML = "";
     if (h2) memberDisplay.appendChild(h2);
