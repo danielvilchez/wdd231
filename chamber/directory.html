@@ -8,8 +8,8 @@
         content="Directory page of the Chamber of Commerce site for Lima. Find local businesses and resources.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamber Directory | Lima</title>
-    <!-- 1st Try -->
-    <!-- Favicon -->
+
+    <!-- Favicon Pr1 -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
@@ -34,7 +34,7 @@
     <header>
         <div class="header-content">
             <a href="index.html" class="logo-link">
-                <img src="images/og_image.png" alt="Logo of Lima Chamber of Commerce" class="logo" loading="lazy">
+                <img src="images/og_image.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="50" height="50" loading="lazy">
                 <p class="site-title-name">Lima Chamber of Commerce</p>
             </a>
             <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
@@ -62,12 +62,12 @@
 
         <!-- Directory Options -->
         <section class="directory-options">
-            <div class="view-toggle">
-                <button id="grid-view" class="active">Grid</button>
-                <button id="list-view">List</button>
+            <div class="view-toggle" role="group" aria-label="Toggle view mode">
+                <button id="grid-view" class="active" aria-pressed="true">Grid</button>
+                <button id="list-view" aria-pressed="false">List</button>
             </div>
 
-            <!-- Lighthouse fix: hidden label for select -->
+            <!-- Hidden label for select -->
             <label for="member-filter" class="visually-hidden">Filter members by membership level</label>
             <select id="member-filter">
                 <option value="all">All Members</option>
@@ -93,9 +93,9 @@
             </div>
 
             <div class="footer-social">
-                <a href="#"><img src="images/youtube.webp" alt="YouTube Profile" loading="lazy"></a>
-                <a href="#"><img src="images/x.webp" alt="Twitter Profile" loading="lazy"></a>
-                <a href="#"><img src="images/linkedin.webp" alt="LinkedIn Profile" loading="lazy"></a>
+                <a href="#"><img src="images/youtube.webp" alt="YouTube Profile" width="30" height="30" loading="lazy"></a>
+                <a href="#"><img src="images/x.webp" alt="Twitter Profile" width="30" height="30" loading="lazy"></a>
+                <a href="#"><img src="images/linkedin.webp" alt="LinkedIn Profile" width="30" height="30" loading="lazy"></a>
             </div>
 
             <div class="footer-dev-info">
