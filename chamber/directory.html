@@ -66,6 +66,11 @@
                 <button id="grid-view" class="active">Grid</button>
                 <button id="list-view">List</button>
             </div>
+
+            <!-- ✅ LABEL ACCESIBLE (Lighthouse fix) -->
+            <label for="member-filter" class="visually-hidden">
+                Filter members by membership level
+            </label>
             <select id="member-filter">
                 <option value="all">All Members</option>
                 <option value="gold">Gold</option>
