@@ -133,6 +133,16 @@ header {
     padding: 1rem 0;
 }
 
+#member-display h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    color: #003366;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+
 .directory-options {
     display: flex;
     justify-content: space-between;

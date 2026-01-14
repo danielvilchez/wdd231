@@ -28,7 +28,10 @@ async function loadMembers() {
 // Display Members using DocumentFragment (performance boost)
 // ===============================
 function displayMembers(members) {
+    // Remueve solo los cards previos, pero conserva h2
+    const h2 = memberDisplay.querySelector("h2");
     memberDisplay.innerHTML = "";
+    if (h2) memberDisplay.appendChild(h2);
 
     const fragment = document.createDocumentFragment();
 
@@ -43,7 +46,7 @@ function displayMembers(members) {
         if (member.level === 1) card.classList.add("level-basic");
 
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}" loading="lazy">
+            <img src="images/${member.image}" alt="${member.name}" loading="lazy" width="100" height="100">
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
