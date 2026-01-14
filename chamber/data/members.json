@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Tech Solutions Ltd.",
+        "address": "Av. Javier Prado 123, Lima, Perú",
+        "phone": "+51 1 234 5678",
+        "website": "https://techsolutions.pe",
+        "image": "techsolutions.png",
+        "level": 3,
+        "notes": "Software and IT services."
+    },
+    {
+        "name": "Green Energy Co.",
+        "address": "Calle Las Flores 456, Lima, Perú",
+        "phone": "+51 1 987 6543",
+        "website": "https://greenenergy.pe",
+        "image": "greenenergy.png",
+        "level": 2,
+        "notes": "Renewable energy provider."
+    },
+    {
+        "name": "Urban Designs",
+        "address": "Av. Arequipa 789, Lima, Perú",
+        "phone": "+51 1 555 6677",
+        "website": "https://urbandesigns.pe",
+        "image": "urbandesigns.png",
+        "level": 1,
+        "notes": "Architectural and interior design."
+    },
+    {
+        "name": "Fresh Foods S.A.",
+        "address": "Calle Comercio 321, Lima, Perú",
+        "phone": "+51 1 112 3344",
+        "website": "https://freshfoods.pe",
+        "image": "freshfoods.png",
+        "level": 3,
+        "notes": "Gourmet food suppliers."
+    },
+    {
+        "name": "EduSmart Academy",
+        "address": "Jr. Las Lilas 456, Lima, Perú",
+        "phone": "+51 1 223 4455",
+        "website": "https://edusmart.pe",
+        "image": "edusmart.png",
+        "level": 2,
+        "notes": "Education and training services."
+    },
+    {
+        "name": "BuildRight Construction",
+        "address": "Av. Grau 789, Lima, Perú",
+        "phone": "+51 1 667 8899",
+        "website": "https://buildright.pe",
+        "image": "buildright.png",
+        "level": 1,
+        "notes": "Construction company."
+    },
+    {
+        "name": "Healthy Life Center",
+        "address": "Calle Primavera 101, Lima, Perú",
+        "phone": "+51 1 334 5566",
+        "website": "https://healthylife.pe",
+        "image": "healthylife.png",
+        "level": 3,
+        "notes": "Wellness and health services."
+    }
+]
