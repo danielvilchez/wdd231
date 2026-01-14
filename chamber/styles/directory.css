@@ -1,5 +1,5 @@
 /* ====================================
-   1. RESET AND TYPHOGRAPHY
+   1. RESET AND TYPOGRAPHY
    ==================================== */
 * {
     box-sizing: border-box;
@@ -24,12 +24,15 @@ h4 {
     margin-bottom: 0.5rem;
 }
 
+/* 🔧 CONTRASTE CORREGIDO */
 a {
-    color: #0055a5;
+    color: #1a4d8f;
+    /* azul más oscuro */
     text-decoration: none;
 }
 
 a:hover {
+    color: #003366;
     text-decoration: underline;
 }
 
@@ -101,12 +104,13 @@ header {
     padding: 0.75rem 1rem;
     display: block;
     background-color: #003366;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
     background-color: #0055a5;
+    color: #ffffff;
 }
 
 /* ====================================
@@ -127,11 +131,13 @@ header {
     padding: 0 1rem;
 }
 
+/* 🔧 BOTONES CON MEJOR CONTRASTE */
 .view-toggle button {
     padding: 0.5rem 1rem;
     cursor: pointer;
-    border: 1px solid #cccccc;
-    background-color: #eeeeee;
+    border: 1px solid #999999;
+    background-color: #e0e0e0;
+    color: #333333;
 }
 
 .view-toggle button.active {
@@ -230,6 +236,7 @@ footer {
 
 .footer-info a {
     color: #ffffff;
+    text-decoration: underline;
 }
 
 /* ====================================
