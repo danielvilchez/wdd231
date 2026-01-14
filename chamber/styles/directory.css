@@ -251,6 +251,11 @@ footer {
     text-decoration: underline;
 }
 
+/* Minimiza CLS en footer */
+.footer-dev-info {
+    min-height: 50px;
+}
+
 /* ====================================
    5. MEDIA QUERIES
    ==================================== */
