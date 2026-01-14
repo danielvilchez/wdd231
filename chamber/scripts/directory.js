@@ -42,11 +42,11 @@ function displayMembers(members) {
         if (member.level === 1) card.classList.add("level-basic");
 
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}">
-            <h4>${member.name}</h4>
+            <img src="images/${member.image}" alt="${member.name}" loading="lazy">
+            <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <p><a href="${member.website}" target="_blank">Website</a></p>
+            <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Website</a></p>
             <p class="membership-level">Level: ${member.level}</p>
             <p>${member.notes}</p>
         `;
