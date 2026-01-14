@@ -24,19 +24,20 @@ async function loadMembers() {
     }
 }
 
+// ===============================
+// Display Members using DocumentFragment (performance boost)
+// ===============================
 function displayMembers(members) {
     memberDisplay.innerHTML = "";
+
+    const fragment = document.createDocumentFragment();
 
     members.forEach(member => {
         const card = document.createElement("div");
         card.classList.add("member-card");
 
-        // Apply list-item class if list view is active
-        if (currentView === "list") {
-            card.classList.add("list-item");
-        }
+        if (currentView === "list") card.classList.add("list-item");
 
-        // Membership level
         if (member.level === 3) card.classList.add("level-gold");
         if (member.level === 2) card.classList.add("level-silver");
         if (member.level === 1) card.classList.add("level-basic");
@@ -51,41 +52,40 @@ function displayMembers(members) {
             <p>${member.notes}</p>
         `;
 
-        memberDisplay.appendChild(card);
+        fragment.appendChild(card);
     });
+
+    memberDisplay.appendChild(fragment);
 }
 
 // ===============================
 // Grid / List Toggle
 // ===============================
-gridButton.addEventListener("click", () => {
-    currentView = "grid";
-    memberDisplay.classList.add("grid-view");
-    memberDisplay.classList.remove("list-view");
-    gridButton.classList.add("active");
-    listButton.classList.remove("active");
+function setView(view) {
+    currentView = view;
+    memberDisplay.classList.toggle("grid-view", view === "grid");
+    memberDisplay.classList.toggle("list-view", view === "list");
+    gridButton.classList.toggle("active", view === "grid");
+    listButton.classList.toggle("active", view === "list");
     displayMembers(allMembers);
-});
+}
 
-listButton.addEventListener("click", () => {
-    currentView = "list";
-    memberDisplay.classList.add("list-view");
-    memberDisplay.classList.remove("grid-view");
-    listButton.classList.add("active");
-    gridButton.classList.remove("active");
-    displayMembers(allMembers);
-});
+gridButton.addEventListener("click", () => setView("grid"));
+listButton.addEventListener("click", () => setView("list"));
 
 // ===============================
 // Filter Members
 // ===============================
 filterSelect.addEventListener("change", () => {
     const value = filterSelect.value;
-
-    if (value === "all") displayMembers(allMembers);
-    if (value === "gold") displayMembers(allMembers.filter(m => m.level === 3));
-    if (value === "silver") displayMembers(allMembers.filter(m => m.level === 2));
-    if (value === "basic") displayMembers(allMembers.filter(m => m.level === 1));
+    const filtered = value === "all"
+        ? allMembers
+        : allMembers.filter(m => {
+            return (value === "gold" && m.level === 3) ||
+                (value === "silver" && m.level === 2) ||
+                (value === "basic" && m.level === 1);
+        });
+    displayMembers(filtered);
 });
 
 // ===============================
@@ -111,5 +111,6 @@ const menuButton = document.getElementById("menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 
 menuButton.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
+    const isOpen = mainNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", isOpen);
 });
