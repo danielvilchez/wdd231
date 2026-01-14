@@ -8,11 +8,11 @@
         content="Directory page of the Chamber of Commerce site for Lima. Find local businesses and resources.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamber Directory | Lima</title>
-
+    <!-- 1st Try -->
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts con swap para evitar bloqueo -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
     <meta property="og:title" content="Chamber Directory | Lima, Perú">
     <meta property="og:description"
         content="Find local businesses and resources in Lima, Perú through our Chamber of Commerce directory.">
-    <meta property="og:image" content="images/og_image-50x50.png">
+    <meta property="og:image" content="images/og_image.png">
     <meta property="og:url" content="https://danielvilchez.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 </head>
@@ -34,9 +34,7 @@
     <header>
         <div class="header-content">
             <a href="index.html" class="logo-link">
-                <!-- Imagen optimizada y con width/height para CLS -->
-                <img src="images/og_image-50x50.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="50"
-                    height="50" loading="lazy">
+                <img src="images/og_image.png" alt="Logo of Lima Chamber of Commerce" class="logo" loading="lazy">
                 <p class="site-title-name">Lima Chamber of Commerce</p>
             </a>
             <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
@@ -69,7 +67,7 @@
                 <button id="list-view">List</button>
             </div>
 
-            <!-- Hidden label para accesibilidad -->
+            <!-- Lighthouse fix: hidden label for select -->
             <label for="member-filter" class="visually-hidden">Filter members by membership level</label>
             <select id="member-filter">
                 <option value="all">All Members</option>
@@ -95,13 +93,9 @@
             </div>
 
             <div class="footer-social">
-                <!-- Imágenes optimizadas y con width/height -->
-                <a href="#"><img src="images/youtube-30x30.webp" alt="YouTube Profile" width="30" height="30"
-                        loading="lazy"></a>
-                <a href="#"><img src="images/x-30x30.webp" alt="Twitter Profile" width="30" height="30"
-                        loading="lazy"></a>
-                <a href="#"><img src="images/linkedin-30x30.webp" alt="LinkedIn Profile" width="30" height="30"
-                        loading="lazy"></a>
+                <a href="#"><img src="images/youtube.webp" alt="YouTube Profile" loading="lazy"></a>
+                <a href="#"><img src="images/x.webp" alt="Twitter Profile" loading="lazy"></a>
+                <a href="#"><img src="images/linkedin.webp" alt="LinkedIn Profile" loading="lazy"></a>
             </div>
 
             <div class="footer-dev-info">
