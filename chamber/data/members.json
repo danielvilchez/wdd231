@@ -4,7 +4,7 @@
         "address": "Av. Javier Prado 123, Lima, Perú",
         "phone": "+51 1 234 5678",
         "website": "https://techsolutions.pe",
-        "image": "techsolutions.webp",
+        "image": "techsolutions.png",
         "level": 3,
         "notes": "Software and IT services."
     },
@@ -13,7 +13,7 @@
         "address": "Calle Las Flores 456, Lima, Perú",
         "phone": "+51 1 987 6543",
         "website": "https://greenenergy.pe",
-        "image": "greenenergy.webp",
+        "image": "greenenergy.png",
         "level": 2,
         "notes": "Renewable energy provider."
     },
@@ -22,7 +22,7 @@
         "address": "Av. Arequipa 789, Lima, Perú",
         "phone": "+51 1 555 6677",
         "website": "https://urbandesigns.pe",
-        "image": "urbandesigns.webp",
+        "image": "urbandesigns.png",
         "level": 1,
         "notes": "Architectural and interior design."
     },
@@ -31,7 +31,7 @@
         "address": "Calle Comercio 321, Lima, Perú",
         "phone": "+51 1 112 3344",
         "website": "https://freshfoods.pe",
-        "image": "freshfoods.webp",
+        "image": "freshfoods.png",
         "level": 3,
         "notes": "Gourmet food suppliers."
     },
@@ -40,7 +40,7 @@
         "address": "Jr. Las Lilas 456, Lima, Perú",
         "phone": "+51 1 223 4455",
         "website": "https://edusmart.pe",
-        "image": "edusmart.webp",
+        "image": "edusmart.png",
         "level": 2,
         "notes": "Education and training services."
     },
@@ -49,7 +49,7 @@
         "address": "Av. Grau 789, Lima, Perú",
         "phone": "+51 1 667 8899",
         "website": "https://buildright.pe",
-        "image": "buildright.webp",
+        "image": "buildright.png",
         "level": 1,
         "notes": "Construction company."
     },
@@ -58,7 +58,7 @@
         "address": "Calle Primavera 101, Lima, Perú",
         "phone": "+51 1 334 5566",
         "website": "https://healthylife.pe",
-        "image": "healthylife.webp",
+        "image": "healthylife.png",
         "level": 3,
         "notes": "Wellness and health services."
     }
