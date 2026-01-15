@@ -16,10 +16,7 @@ body {
     overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
     margin-bottom: 0.5rem;
 }
@@ -74,9 +71,7 @@ header {
 
 .logo {
     width: 64px;
-    /* ancho fijo para Lighthouse */
     height: 64px;
-    /* altura fija */
     margin-right: 10px;
 }
 
@@ -178,9 +173,7 @@ header {
     transition: transform 0.3s ease;
     will-change: transform;
     border-left: 5px solid transparent;
-
-    /* Evitar CLS reservando espacio */
-    min-height: 250px;
+    min-height: 250px; /* Evitar CLS */
 }
 
 /* ====================================
@@ -188,7 +181,6 @@ header {
    ==================================== */
 .member-card img {
     width: 100%;
-    /* mantiene proporción y evita CLS */
     height: auto;
     aspect-ratio: 3/2;
     border-radius: 8px;
@@ -197,7 +189,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* Ajuste específico para list view */
 #member-display.list-view .member-card img {
     width: 80px;
     height: 80px;
@@ -225,7 +216,6 @@ header {
     margin-bottom: 5px;
 }
 
-/* Niveles de miembros */
 .member-card.level-gold {
     border-left: 8px solid #FFD700;
     background-color: #FFFBE6;
@@ -260,9 +250,7 @@ footer {
     margin: 0 auto;
     padding: 0 1rem;
     font-size: 0.9rem;
-
-    /* Evitar CLS reservando altura mínima */
-    min-height: 140px;
+    min-height: 140px; /* Evitar CLS */
 }
 
 .footer-info,
