@@ -18,7 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=optional" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="preload" href="styles/directory.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="styles/directory.css">
+    </noscript>
+
     <!--<link rel="preload" href="styles/directory.css" as="style">
     <link rel="stylesheet" href="styles/directory.css">-->
 
