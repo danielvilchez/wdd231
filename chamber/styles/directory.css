@@ -200,7 +200,7 @@ header {
 }
 
 /* ====================================
-   3.2 LIST VIEW
+   3.2 LIST VIEW (CORREGIDO)
    ==================================== */
 
 #member-display.list-view {
@@ -257,29 +257,6 @@ header {
 .member-card.level-basic {
     border-left: 8px solid #CD7F32;
     background-color: #f7f7f7;
-}
-
-/* ====================================
-   3.4 LEVEL COLOR IDENTITY (DISTINTIVO)
-   ==================================== */
-
-/* GOLD */
-.member-card.level-gold h3,
-.member-card.level-gold .membership-level {
-    color: #996600;
-    /* Contraste corregido para WCAG AA */
-}
-
-/* SILVER */
-.member-card.level-silver h3,
-.member-card.level-silver .membership-level {
-    color: #6b6b6b;
-}
-
-/* BASIC */
-.member-card.level-basic h3,
-.member-card.level-basic .membership-level {
-    color: #8b5a2b;
 }
 
 /* ====================================
