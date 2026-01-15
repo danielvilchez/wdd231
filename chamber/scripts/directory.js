@@ -8,6 +8,7 @@ const filterSelect = document.querySelector("#member-filter");
 
 let allMembers = [];
 let currentView = "grid"; // track current view
+let firstImageSet = false; // Para detectar la primera imagen
 
 // ===============================
 // Fetch & Display Members
@@ -42,8 +43,12 @@ function displayMembers(members) {
         if (member.level === 2) card.classList.add("level-silver");
         if (member.level === 1) card.classList.add("level-basic");
 
+        // Agregar fetchpriority="high" solo a la primera imagen
+        const fetchPriorityAttr = !firstImageSet ? 'fetchpriority="high"' : '';
+        if (!firstImageSet) firstImageSet = true;
+
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}" loading="lazy">
+            <img src="images/${member.image}" alt="${member.name}" loading="lazy" ${fetchPriorityAttr}>
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
@@ -67,6 +72,7 @@ function setView(view) {
     memberDisplay.classList.toggle("list-view", view === "list");
     gridButton.classList.toggle("active", view === "grid");
     listButton.classList.toggle("active", view === "list");
+    firstImageSet = false; // resetear para que la primera imagen del nuevo view tenga prioridad
     displayMembers(allMembers);
 }
 
@@ -85,6 +91,7 @@ filterSelect.addEventListener("change", () => {
                 (value === "silver" && m.level === 2) ||
                 (value === "basic" && m.level === 1);
         });
+    firstImageSet = false; // resetear para que la primera imagen filtrada tenga prioridad
     displayMembers(filtered);
 });
 
