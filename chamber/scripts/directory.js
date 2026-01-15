@@ -6,53 +6,75 @@ const gridButton = document.querySelector("#grid-view");
 const listButton = document.querySelector("#list-view");
 const filterSelect = document.querySelector("#member-filter");
 
-let allMembers = [];
-let currentView = "grid"; // track current view
+const menuButton = document.getElementById("menu-toggle");
+const mainNav = document.querySelector(".main-nav");
 
 // ===============================
-// Fetch & Display Members
+// State
+// ===============================
+let allMembers = [];
+let currentView = "grid";
+let currentFilter = "all";
+
+// ===============================
+// Fetch Members (async/await)
 // ===============================
 async function loadMembers() {
     try {
         const response = await fetch("data/members.json");
-        const members = await response.json();
-        allMembers = members;
-        displayMembers(members);
+        if (!response.ok) throw new Error("Network response was not ok");
+
+        allMembers = await response.json();
+        applyFiltersAndView();
     } catch (error) {
         console.error("Error loading members:", error);
-        memberDisplay.innerHTML += "<p>Failed to load member data.</p>";
+        memberDisplay.innerHTML = "<p>Failed to load member data.</p>";
     }
 }
 
 // ===============================
-// Display Members dynamically (skip first member)
+// Display Members
 // ===============================
 function displayMembers(members) {
-    // Mantener la primera tarjeta HTML intacta
+    memberDisplay.innerHTML = "";
+
     const fragment = document.createDocumentFragment();
 
-    // Omitir el primer miembro si ya está en HTML
-    const skipFirst = true;
-    members.forEach((member, index) => {
-        if (skipFirst && index === 0) return; // primera tarjeta ya en HTML
-
+    members.forEach(member => {
         const card = document.createElement("div");
         card.classList.add("member-card");
-        if (currentView === "list") card.classList.add("list-item");
 
+        // Membership level styling
         if (member.level === 3) card.classList.add("level-gold");
         if (member.level === 2) card.classList.add("level-silver");
         if (member.level === 1) card.classList.add("level-basic");
 
+        // List view styling
+        if (currentView === "list") {
+            card.classList.add("list-item");
+        }
+
+        // Content
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}" loading="lazy" width="600" height="400">
-            <h3>${member.name}</h3>
+            ${currentView === "grid" ? `
+                <img 
+                    src="images/${member.image}" 
+                    alt="${member.name}" 
+                    loading="lazy" 
+                    width="600" 
+                    height="400">
+            ` : ""}
+
+            <h3 class="member-title">${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Website</a></p>
-            <p class="membership-level">Level: ${member.level}</p>
-            <p>${member.notes}</p>
+            <p>
+                <a href="${member.website}" target="_blank" rel="noopener noreferrer">
+                    Visit Website
+                </a>
+            </p>
         `;
+
         fragment.appendChild(card);
     });
 
@@ -60,42 +82,64 @@ function displayMembers(members) {
 }
 
 // ===============================
-// Grid / List Toggle
+// Apply Filter + View
 // ===============================
-function setView(view) {
-    currentView = view;
-    memberDisplay.classList.toggle("grid-view", view === "grid");
-    memberDisplay.classList.toggle("list-view", view === "list");
-    gridButton.classList.toggle("active", view === "grid");
-    listButton.classList.toggle("active", view === "list");
-    displayMembers(allMembers);
+function applyFiltersAndView() {
+    let filteredMembers = allMembers;
+
+    if (currentFilter !== "all") {
+        filteredMembers = allMembers.filter(
+            member => member.level === Number(currentFilter)
+        );
+    }
+
+    // Toggle container layout
+    memberDisplay.classList.toggle("grid-view", currentView === "grid");
+    memberDisplay.classList.toggle("list-view", currentView === "list");
+
+    // Toggle buttons
+    gridButton.classList.toggle("active", currentView === "grid");
+    listButton.classList.toggle("active", currentView === "list");
+
+    displayMembers(filteredMembers);
 }
 
-gridButton.addEventListener("click", () => setView("grid"));
-listButton.addEventListener("click", () => setView("list"));
+// ===============================
+// Event Listeners
+// ===============================
+gridButton.addEventListener("click", () => {
+    currentView = "grid";
+    applyFiltersAndView();
+});
 
-// ===============================
-// Filter Members
-// ===============================
+listButton.addEventListener("click", () => {
+    currentView = "list";
+    applyFiltersAndView();
+});
+
 filterSelect.addEventListener("change", () => {
-    const value = filterSelect.value;
-    const filtered = value === "all"
-        ? allMembers
-        : allMembers.filter(m => {
-            return (value === "gold" && m.level === 3) ||
-                (value === "silver" && m.level === 2) ||
-                (value === "basic" && m.level === 1);
-        });
-    displayMembers(filtered);
+    currentFilter = filterSelect.value;
+    applyFiltersAndView();
 });
 
 // ===============================
-// Footer Dynamic Info
+// Footer Info
 // ===============================
 function updateFooter() {
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastmodified").textContent = document.lastModified;
+    document.getElementById("currentyear").textContent =
+        new Date().getFullYear();
+
+    document.getElementById("lastmodified").textContent =
+        document.lastModified;
 }
+
+// ===============================
+// Mobile Navigation Toggle
+// ===============================
+menuButton.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", isOpen);
+});
 
 // ===============================
 // Init
@@ -103,15 +147,4 @@ function updateFooter() {
 document.addEventListener("DOMContentLoaded", () => {
     loadMembers();
     updateFooter();
-});
-
-// ===============================
-// Mobile Navigation Toggle
-// ===============================
-const menuButton = document.getElementById("menu-toggle");
-const mainNav = document.querySelector(".main-nav");
-
-menuButton.addEventListener("click", () => {
-    const isOpen = mainNav.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", isOpen);
 });
