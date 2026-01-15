@@ -200,7 +200,7 @@ header {
 }
 
 /* ====================================
-   3.2 LIST VIEW (CORREGIDO)
+   3.2 LIST VIEW
    ==================================== */
 
 #member-display.list-view {
@@ -266,22 +266,20 @@ header {
 /* GOLD */
 .member-card.level-gold h3,
 .member-card.level-gold .membership-level {
-    color: #b8860b;
-    /* Gold oscuro, buen contraste */
+    color: #996600;
+    /* Contraste corregido para WCAG AA */
 }
 
 /* SILVER */
 .member-card.level-silver h3,
 .member-card.level-silver .membership-level {
     color: #6b6b6b;
-    /* Gris elegante */
 }
 
 /* BASIC */
 .member-card.level-basic h3,
 .member-card.level-basic .membership-level {
     color: #8b5a2b;
-    /* Bronce */
 }
 
 /* ====================================
