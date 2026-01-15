@@ -8,7 +8,6 @@ const filterSelect = document.querySelector("#member-filter");
 
 let allMembers = [];
 let currentView = "grid"; // track current view
-let firstImageSet = false; // Para detectar la primera imagen
 
 // ===============================
 // Fetch & Display Members
@@ -21,34 +20,32 @@ async function loadMembers() {
         displayMembers(members);
     } catch (error) {
         console.error("Error loading members:", error);
-        memberDisplay.innerHTML = "<p>Failed to load member data.</p>";
+        memberDisplay.innerHTML += "<p>Failed to load member data.</p>";
     }
 }
 
 // ===============================
-// Display Members using DocumentFragment (performance boost)
+// Display Members dynamically (skip first member)
 // ===============================
 function displayMembers(members) {
-    memberDisplay.innerHTML = "";
-
+    // Mantener la primera tarjeta HTML intacta
     const fragment = document.createDocumentFragment();
 
-    members.forEach(member => {
+    // Omitir el primer miembro si ya está en HTML
+    const skipFirst = true;
+    members.forEach((member, index) => {
+        if (skipFirst && index === 0) return; // primera tarjeta ya en HTML
+
         const card = document.createElement("div");
         card.classList.add("member-card");
-
         if (currentView === "list") card.classList.add("list-item");
 
         if (member.level === 3) card.classList.add("level-gold");
         if (member.level === 2) card.classList.add("level-silver");
         if (member.level === 1) card.classList.add("level-basic");
 
-        // Agregar fetchpriority="high" solo a la primera imagen
-        const fetchPriorityAttr = !firstImageSet ? 'fetchpriority="high"' : '';
-        if (!firstImageSet) firstImageSet = true;
-
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}" loading="lazy" ${fetchPriorityAttr}>
+            <img src="images/${member.image}" alt="${member.name}" loading="lazy" width="600" height="400">
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
@@ -56,7 +53,6 @@ function displayMembers(members) {
             <p class="membership-level">Level: ${member.level}</p>
             <p>${member.notes}</p>
         `;
-
         fragment.appendChild(card);
     });
 
@@ -72,7 +68,6 @@ function setView(view) {
     memberDisplay.classList.toggle("list-view", view === "list");
     gridButton.classList.toggle("active", view === "grid");
     listButton.classList.toggle("active", view === "list");
-    firstImageSet = false; // resetear para que la primera imagen del nuevo view tenga prioridad
     displayMembers(allMembers);
 }
 
@@ -91,7 +86,6 @@ filterSelect.addEventListener("change", () => {
                 (value === "silver" && m.level === 2) ||
                 (value === "basic" && m.level === 1);
         });
-    firstImageSet = false; // resetear para que la primera imagen filtrada tenga prioridad
     displayMembers(filtered);
 });
 
