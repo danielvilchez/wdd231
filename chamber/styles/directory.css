@@ -1,3 +1,7 @@
+/* ====================================
+   1. BASE STYLES
+   ==================================== */
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #f4f4f4;
@@ -18,7 +22,6 @@ h4 {
 /* Títulos de miembro: reservar altura para evitar CLS */
 .member-title {
     min-height: 2.5rem;
-    /* Ajusta según tamaño de fuente */
 }
 
 /* ✅ ACCESIBILIDAD: LABEL OCULTO */
@@ -48,6 +51,7 @@ a:hover {
 /* ====================================
    2. HEADER AND NAVIGATION
    ==================================== */
+
 header {
     background-color: #003366;
     color: #ffffff;
@@ -125,6 +129,7 @@ header {
 /* ====================================
    3. HERO AND DIRECTORY
    ==================================== */
+
 .hero h1 {
     text-align: center;
     margin-bottom: 1rem;
@@ -155,6 +160,10 @@ header {
     border-color: #004a94;
 }
 
+/* ====================================
+   3.1 GRID VIEW
+   ==================================== */
+
 #member-display.grid-view {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -176,44 +185,64 @@ header {
     min-height: 400px;
 }
 
-/* ====================================
-   3.1 MEMBER CARD IMAGES
-   ==================================== */
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMÁGENES GRID */
 .member-card img {
     width: 100%;
-    aspect-ratio: 3/2;
+    aspect-ratio: 3 / 2;
     border-radius: 8px;
     object-fit: cover;
     display: block;
     margin-bottom: 10px;
 }
 
-#member-display.list-view .member-card img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 0;
-    margin-right: 10px;
-}
-
-.member-card:hover {
-    transform: translateY(-5px);
-}
+/* ====================================
+   3.2 LIST VIEW (CORREGIDO)
+   ==================================== */
 
 #member-display.list-view {
     display: flex;
     flex-direction: column;
     gap: 1px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.member-card.list-item {
+#member-display.list-view .member-card {
     display: grid;
-    grid-template-columns: 100px 1fr 150px;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    align-items: start;
     background-color: #ffffff;
     border: 1px solid #eeeeee;
-    padding: 10px 20px;
-    margin-bottom: 5px;
+    padding: 1rem;
+    border-radius: 0;
+    min-height: auto;
 }
+
+/* ❌ IMÁGENES OCULTAS EN LIST (RÚBRICA) */
+#member-display.list-view img {
+    display: none;
+}
+
+/* TEXTO ORDENADO */
+#member-display.list-view h3 {
+    margin: 0.25rem 0;
+    font-size: 1.1rem;
+}
+
+#member-display.list-view p {
+    margin: 0.15rem 0;
+    line-height: 1.4;
+}
+
+/* ====================================
+   3.3 MEMBERSHIP LEVELS
+   ==================================== */
 
 .member-card.level-gold {
     border-left: 8px solid #FFD700;
@@ -231,8 +260,35 @@ header {
 }
 
 /* ====================================
+   3.4 LEVEL COLOR IDENTITY (DISTINTIVO)
+   ==================================== */
+
+/* GOLD */
+.member-card.level-gold h3,
+.member-card.level-gold .membership-level {
+    color: #b8860b;
+    /* Gold oscuro, buen contraste */
+}
+
+/* SILVER */
+.member-card.level-silver h3,
+.member-card.level-silver .membership-level {
+    color: #6b6b6b;
+    /* Gris elegante */
+}
+
+/* BASIC */
+.member-card.level-basic h3,
+.member-card.level-basic .membership-level {
+    color: #8b5a2b;
+    /* Bronce */
+}
+
+
+/* ====================================
    4. FOOTER
    ==================================== */
+
 footer {
     background-color: #003366;
     color: #ffffff;
@@ -250,7 +306,6 @@ footer {
     padding: 0 1rem;
     font-size: 0.9rem;
     min-height: 140px;
-    /* Evitar CLS */
 }
 
 .footer-info,
