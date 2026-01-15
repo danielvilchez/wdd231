@@ -200,7 +200,7 @@ header {
 }
 
 /* ====================================
-   3.2 LIST VIEW (CORREGIDO)
+   3.2 LIST VIEW (con color de nivel)
    ==================================== */
 
 #member-display.list-view {
@@ -218,13 +218,14 @@ header {
     gap: 0.25rem;
     align-items: start;
     background-color: #ffffff;
+    /* este será reemplazado por cada nivel */
     border: 1px solid #eeeeee;
     padding: 1rem;
     border-radius: 0;
     min-height: auto;
 }
 
-/* ❌ IMÁGENES OCULTAS EN LIST (RÚBRICA) */
+/* ❌ IMÁGENES OCULTAS EN LIST */
 #member-display.list-view img {
     display: none;
 }
@@ -239,6 +240,44 @@ header {
     margin: 0.15rem 0;
     line-height: 1.4;
 }
+
+/* COLORES POR LEVEL EN LIST VIEW */
+
+/* GOLD */
+#member-display.list-view .member-card.level-gold {
+    background-color: #FFFBE6;
+    /* mismo que en grid */
+    border-left: 8px solid #FFD700;
+}
+
+#member-display.list-view .member-card.level-gold h3,
+#member-display.list-view .member-card.level-gold .membership-level {
+    color: #996600;
+    /* contraste corregido */
+}
+
+/* SILVER */
+#member-display.list-view .member-card.level-silver {
+    background-color: #FAFAFA;
+    border-left: 8px solid #C0C0C0;
+}
+
+#member-display.list-view .member-card.level-silver h3,
+#member-display.list-view .member-card.level-silver .membership-level {
+    color: #6b6b6b;
+}
+
+/* BASIC */
+#member-display.list-view .member-card.level-basic {
+    background-color: #f7f7f7;
+    border-left: 8px solid #CD7F32;
+}
+
+#member-display.list-view .member-card.level-basic h3,
+#member-display.list-view .member-card.level-basic .membership-level {
+    color: #8b5a2b;
+}
+
 
 /* ====================================
    3.3 MEMBERSHIP LEVELS
