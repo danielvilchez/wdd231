@@ -178,17 +178,19 @@ header {
     transition: transform 0.3s ease;
     will-change: transform;
     border-left: 5px solid transparent;
+
+    /* Evitar CLS reservando espacio */
+    min-height: 250px;
 }
 
 /* ====================================
    3.1 MEMBER CARD IMAGES
    ==================================== */
 .member-card img {
-    width: 150px;
-    /* tamaño fijo para evitar CLS */
+    width: 100%;
+    /* mantiene proporción y evita CLS */
     height: auto;
-    /* mantiene proporción */
-    max-width: 100%;
+    aspect-ratio: 3/2;
     border-radius: 8px;
     object-fit: cover;
     display: block;
@@ -258,6 +260,9 @@ footer {
     margin: 0 auto;
     padding: 0 1rem;
     font-size: 0.9rem;
+
+    /* Evitar CLS reservando altura mínima */
+    min-height: 140px;
 }
 
 .footer-info,
@@ -268,9 +273,7 @@ footer {
 
 .footer-social img {
     width: 32px;
-    /* tamaño fijo para evitar CLS */
     height: 32px;
-    /* tamaño fijo para evitar CLS */
     margin-right: 10px;
 }
 
