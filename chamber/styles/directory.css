@@ -262,33 +262,32 @@ header {
 /* ====================================
    3.4 LEVEL COLOR IDENTITY (DISTINTIVO)
    ==================================== */
-
 /* GOLD */
 .member-card.level-gold {
     border-left: 8px solid #FFD700;
-    /* borde dorado */
-    background-color: #FFF8E1;
-    /* amarillo más pálido, más contraste */
+    /* borde dorado brillante */
+    background-color: #FFFBE6;
+    /* fondo amarillo pálido */
 }
 
 .member-card.level-gold h3,
 .member-card.level-gold .membership-level {
-    color: #8b6b00;
-    /* dorado oscuro que cumple contraste 4.5:1 sobre #FFF8E1 */
+    color: #B8860B;
+    /* dorado oscuro, suficiente contraste */
 }
 
 /* SILVER */
 .member-card.level-silver {
     border-left: 8px solid #C0C0C0;
     /* borde plateado */
-    background-color: #F4F4F4;
-    /* gris claro */
+    background-color: #FAFAFA;
+    /* fondo gris muy claro */
 }
 
 .member-card.level-silver h3,
 .member-card.level-silver .membership-level {
-    color: #4d4d4d;
-    /* gris oscuro para buen contraste */
+    color: #4D4D4D;
+    /* gris oscuro, legible */
 }
 
 /* BASIC */
@@ -296,14 +295,15 @@ header {
     border-left: 8px solid #CD7F32;
     /* borde bronce */
     background-color: #F7F7F7;
-    /* fondo neutro */
+    /* fondo neutro claro */
 }
 
 .member-card.level-basic h3,
 .member-card.level-basic .membership-level {
-    color: #5a3f1b;
-    /* bronce oscuro para contraste */
+    color: #5A3F1B;
+    /* bronce oscuro, legible */
 }
+
 
 
 /* ====================================
