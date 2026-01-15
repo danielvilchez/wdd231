@@ -9,18 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamber Directory | Lima</title>
 
-    <!-- Favicon prueba 1-->
+    <!-- Favicon 1-->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts Preconnect -->
+    <!-- Google Fonts Preconnect & Stylesheet con display optional -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Google Fonts Preload & Stylesheet -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=optional" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="preload" href="styles/directory.css" as="style">
@@ -87,7 +82,7 @@
             <!-- Primera tarjeta renderizada en HTML para LCP -->
             <div class="member-card level-gold">
                 <img src="images/techsolutions.webp" alt="TechSolutions" fetchpriority="high" width="600" height="400">
-                <h3>TechSolutions</h3>
+                <h3 class="member-title">TechSolutions</h3>
                 <p>Av. Ejemplo 123, Lima</p>
                 <p>+51 1 234-5678</p>
                 <p><a href="https://www.techsolutions.com" target="_blank" rel="noopener noreferrer">Website</a></p>

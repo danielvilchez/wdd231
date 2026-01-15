@@ -21,6 +21,11 @@ h1, h2, h3, h4 {
     margin-bottom: 0.5rem;
 }
 
+/* Títulos de miembro: reservar altura para evitar CLS */
+.member-title {
+    min-height: 2.5rem; /* Ajusta según tamaño de fuente */
+}
+
 /* ✅ ACCESIBILIDAD: LABEL OCULTO */
 .visually-hidden {
     position: absolute;
@@ -173,7 +178,7 @@ header {
     transition: transform 0.3s ease;
     will-change: transform;
     border-left: 5px solid transparent;
-    min-height: 250px; /* Evitar CLS */
+    min-height: 400px; /* Evitar CLS: cubrir imagen + h3 + texto */
 }
 
 /* ====================================
@@ -181,7 +186,6 @@ header {
    ==================================== */
 .member-card img {
     width: 100%;
-    height: auto;
     aspect-ratio: 3/2;
     border-radius: 8px;
     object-fit: cover;
