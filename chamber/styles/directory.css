@@ -264,24 +264,45 @@ header {
    ==================================== */
 
 /* GOLD */
+.member-card.level-gold {
+    border-left: 8px solid #FFD700;
+    /* borde dorado */
+    background-color: #FFF8E1;
+    /* amarillo más pálido, más contraste */
+}
+
 .member-card.level-gold h3,
 .member-card.level-gold .membership-level {
-    color: #b8860b;
-    /* Gold oscuro, buen contraste */
+    color: #8b6b00;
+    /* dorado oscuro que cumple contraste 4.5:1 sobre #FFF8E1 */
 }
 
 /* SILVER */
+.member-card.level-silver {
+    border-left: 8px solid #C0C0C0;
+    /* borde plateado */
+    background-color: #F4F4F4;
+    /* gris claro */
+}
+
 .member-card.level-silver h3,
 .member-card.level-silver .membership-level {
-    color: #6b6b6b;
-    /* Gris elegante */
+    color: #4d4d4d;
+    /* gris oscuro para buen contraste */
 }
 
 /* BASIC */
+.member-card.level-basic {
+    border-left: 8px solid #CD7F32;
+    /* borde bronce */
+    background-color: #F7F7F7;
+    /* fondo neutro */
+}
+
 .member-card.level-basic h3,
 .member-card.level-basic .membership-level {
-    color: #8b5a2b;
-    /* Bronce */
+    color: #5a3f1b;
+    /* bronce oscuro para contraste */
 }
 
 
