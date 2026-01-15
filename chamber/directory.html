@@ -7,27 +7,37 @@
     <meta name="description"
         content="Directory page of the Chamber of Commerce site for Lima. Find local businesses and resources.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Chamber Directory | Lima</title>
 
-    <!-- Favicon 1-->
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts (non render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        as="style"
         onload="this.onload=null;this.rel='stylesheet'">
 
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     </noscript>
 
-    <!-- CSS -->
-    <!-- CSS -->
+    <!-- ✅ Preload LCP Image -->
+    <link rel="preload"
+          as="image"
+          href="images/techsolutions.webp"
+          type="image/webp"
+          fetchpriority="high">
+
+    <!-- CSS (reset FIRST) -->
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/reset.css">
 
     <!-- JavaScript -->
     <script src="scripts/directory.js" defer></script>
@@ -36,22 +46,35 @@
     <meta property="og:title" content="Chamber Directory of Local Businesses in Lima, Perú">
     <meta property="og:description"
         content="Find local businesses and resources in Lima, Perú through our Chamber of Commerce directory.">
-    <meta property="og:image" content="https://danielvilchez.github.io/wdd231/chamber/images/og_image.png">
-    <meta property="og:url" content="https://danielvilchez.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image"
+        content="https://danielvilchez.github.io/wdd231/chamber/images/og_image.png">
+    <meta property="og:url"
+        content="https://danielvilchez.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 </head>
 
 <body>
-    <!-- Header -->
+
+    <!-- ================= HEADER ================= -->
     <header>
         <div class="header-content">
             <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="64" height="64"
-                    fetchpriority="high">
+                <img src="images/logo.png"
+                     alt="Logo of Lima Chamber of Commerce"
+                     class="logo"
+                     width="64"
+                     height="64"
+                     fetchpriority="high">
                 <p class="site-title-name">Lima Chamber of Commerce</p>
             </a>
+
             <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
-            <button id="menu-toggle" class="menu-button" aria-controls="primary-nav" aria-expanded="false">☰</button>
+            <button id="menu-toggle"
+                    class="menu-button"
+                    aria-controls="primary-nav"
+                    aria-expanded="false">
+                ☰
+            </button>
         </div>
 
         <!-- Navigation -->
@@ -67,8 +90,9 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- ================= MAIN ================= -->
     <main>
+
         <div class="hero">
             <h1>Business Directory</h1>
         </div>
@@ -85,6 +109,7 @@
             <label for="member-filter" class="visually-hidden">
                 Filter members by membership level
             </label>
+
             <select id="member-filter">
                 <option value="all">All Members</option>
                 <option value="3">Gold</option>
@@ -93,39 +118,75 @@
             </select>
         </section>
 
+        <!-- Member Display -->
+        <section id="member-display"
+                 class="grid-view"
+                 aria-live="polite">
 
-        <section id="member-display" class="grid-view" aria-live="polite">
-            <!-- Primera tarjeta renderizada en HTML para LCP -->
+            <!-- ✅ First card for LCP -->
             <div class="member-card level-gold">
-                <img src="images/techsolutions.webp" alt="TechSolutions" fetchpriority="high" width="600" height="400">
-                <h3 class="member-title">TechSolutions</h3>
-                <p>Av. Ejemplo 123, Lima</p>
-                <p>+51 1 234-5678</p>
-                <p><a href="https://www.techsolutions.com" target="_blank" rel="noopener noreferrer">Website</a></p>
+                <img src="images/techsolutions.webp"
+                     alt="Tech Solutions Ltd."
+                     width="600"
+                     height="400"
+                     fetchpriority="high">
+
+                <h3 class="member-title">Tech Solutions Ltd.</h3>
+                <p>Av. Javier Prado 123, Lima, Perú</p>
+                <p>+51 1 234 5678</p>
+                <p>
+                    <a href="https://techsolutions.pe"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Website
+                    </a>
+                </p>
                 <p class="membership-level">Level: 3</p>
-                <p>Leading technology solutions in Lima.</p>
+                <p>Software and IT services.</p>
             </div>
+
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
     <footer>
         <div class="footer-grid">
+
             <div class="footer-info">
                 <h2>Lima Chamber of Commerce</h2>
                 <p>Av. Ficticia 123, Office 456</p>
                 <p>Lima, Perú</p>
-                <p>Email: <a href="mailto:info@limachamber.org">info@limachamber.org</a></p>
+                <p>
+                    Email:
+                    <a href="mailto:info@limachamber.org">
+                        info@limachamber.org
+                    </a>
+                </p>
                 <p>Phone: +51 1 555-1234</p>
             </div>
 
             <div class="footer-social">
-                <a href="#"><img src="images/youtube.jpg" alt="YouTube Profile" loading="lazy" width="32"
-                        height="32"></a>
-                <a href="#"><img src="images/twitterx-icon.jpg" alt="Twitter Profile" loading="lazy" width="32"
-                        height="32"></a>
-                <a href="#"><img src="images/linkedin.jpg" alt="LinkedIn Profile" loading="lazy" width="32"
-                        height="32"></a>
+                <a href="#">
+                    <img src="images/youtube.jpg"
+                         alt="YouTube Profile"
+                         loading="lazy"
+                         width="32"
+                         height="32">
+                </a>
+                <a href="#">
+                    <img src="images/twitterx-icon.jpg"
+                         alt="Twitter Profile"
+                         loading="lazy"
+                         width="32"
+                         height="32">
+                </a>
+                <a href="#">
+                    <img src="images/linkedin.jpg"
+                         alt="LinkedIn Profile"
+                         loading="lazy"
+                         width="32"
+                         height="32">
+                </a>
             </div>
 
             <div class="footer-dev-info">
@@ -133,9 +194,9 @@
                 <p>Daniel Vilchez | WDD 231 Class Project</p>
                 <p>Last Modified: <span id="lastmodified"></span></p>
             </div>
+
         </div>
     </footer>
-
 
 </body>
 
