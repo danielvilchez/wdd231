@@ -16,14 +16,18 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Roboto', sans-serif;
     margin-bottom: 0.5rem;
 }
 
 /* Títulos de miembro: reservar altura para evitar CLS */
 .member-title {
-    min-height: 2.5rem; /* Ajusta según tamaño de fuente */
+    min-height: 2.5rem;
+    /* Ajusta según tamaño de fuente */
 }
 
 /* ✅ ACCESIBILIDAD: LABEL OCULTO */
@@ -178,7 +182,8 @@ header {
     transition: transform 0.3s ease;
     will-change: transform;
     border-left: 5px solid transparent;
-    min-height: 400px; /* Evitar CLS: cubrir imagen + h3 + texto */
+    min-height: 400px;
+    /* Evitar CLS: cubrir imagen + h3 + texto */
 }
 
 /* ====================================
@@ -254,7 +259,8 @@ footer {
     margin: 0 auto;
     padding: 0 1rem;
     font-size: 0.9rem;
-    min-height: 140px; /* Evitar CLS */
+    min-height: 140px;
+    /* Evitar CLS */
 }
 
 .footer-info,
@@ -273,4 +279,3 @@ footer {
     color: #ffffff;
     text-decoration: underline;
 }
-

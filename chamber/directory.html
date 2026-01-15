@@ -45,8 +45,8 @@
     <header>
         <div class="header-content">
             <a href="index.html" class="logo-link">
-                <img src="images/og_image.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="64"
-                    height="64" fetchpriority="high">
+                <img src="images/logo.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="64" height="64"
+                    fetchpriority="high">
                 <p class="site-title-name">Lima Chamber of Commerce</p>
             </a>
             <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
@@ -74,12 +74,16 @@
 
         <!-- Directory Options -->
         <section class="directory-options">
+            <h2 class="visually-hidden">Directory display and filter options</h2>
+
             <div class="view-toggle">
                 <button id="grid-view" class="active">Grid</button>
                 <button id="list-view">List</button>
             </div>
 
-            <label for="member-filter" class="visually-hidden">Filter members by membership level</label>
+            <label for="member-filter" class="visually-hidden">
+                Filter members by membership level
+            </label>
             <select id="member-filter">
                 <option value="all">All Members</option>
                 <option value="gold">Gold</option>
@@ -87,6 +91,7 @@
                 <option value="basic">Basic</option>
             </select>
         </section>
+
 
         <section id="member-display" class="grid-view" aria-live="polite">
             <!-- Primera tarjeta renderizada en HTML para LCP -->
