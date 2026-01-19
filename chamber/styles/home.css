@@ -1,0 +1,103 @@
+/* ================= HOME PAGE ================= */
+
+/* HERO */
+.hero {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 1.5rem 1rem;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0.5rem auto;
+}
+
+/* CTA BUTTON */
+.cta-button {
+    display: inline-block;
+    background-color: #0055a5;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #003366;
+}
+
+/* SECTIONS */
+.events,
+.weather,
+.spotlights {
+    background-color: #ffffff;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* EVENTS LIST */
+.events ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+/* SPOTLIGHTS CONTAINER */
+#spotlight-container {
+    display: grid;
+    gap: 1rem;
+}
+
+/* ================= HOME GRID ================= */
+.home-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.home-grid>section {
+    display: block;
+    /* stacked by default on mobile */
+}
+
+/* Desktop 3-column layout */
+@media (min-width: 768px) {
+    .home-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* WEATHER */
+.weather ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.weather li {
+    background-color: #f4f4f4;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    overflow-wrap: break-word;
+    /* evita que el texto largo se salga */
+    word-wrap: break-word;
+    word-break: break-word;
+}
