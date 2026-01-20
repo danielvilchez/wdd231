@@ -96,8 +96,9 @@
     padding: 0.5rem 0.75rem;
     margin-bottom: 0.5rem;
     border-radius: 4px;
-    overflow-wrap: break-word;
-    /* estándar moderno */
-    word-break: break-word;
-    /* soporte extra para textos largos */
+
+    overflow-wrap: anywhere;
+    /* estándar moderno, NO deprecated */
+    word-break: normal;
+    /* valor válido según CSS3 */
 }
