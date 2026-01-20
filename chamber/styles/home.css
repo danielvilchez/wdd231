@@ -48,7 +48,7 @@
     margin: 1rem 0;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px #0000001A;
 }
 
 /* EVENTS LIST */
@@ -74,10 +74,9 @@
 
 .home-grid>section {
     display: block;
-    /* stacked by default on mobile */
 }
 
-/* Desktop 3-column layout */
+/* Desktop layout */
 @media (min-width: 768px) {
     .home-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -96,9 +95,6 @@
     padding: 0.5rem 0.75rem;
     margin-bottom: 0.5rem;
     border-radius: 4px;
-
     overflow-wrap: anywhere;
-    /* estándar moderno, NO deprecated */
     word-break: normal;
-    /* valor válido según CSS3 */
 }
