@@ -97,7 +97,7 @@
     margin-bottom: 0.5rem;
     border-radius: 4px;
     overflow-wrap: break-word;
-    /* evita que el texto largo se salga */
-    word-wrap: break-word;
+    /* estándar moderno */
     word-break: break-word;
+    /* soporte extra para textos largos */
 }
