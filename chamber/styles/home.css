@@ -102,15 +102,3 @@
     word-break: normal;
     /* valor válido según CSS3 */
 }
-
-/* ===== ACCESIBILIDAD: FIX CONTRASTE LINKS EN FONDOS OSCUROS (HOME ONLY) ===== */
-
-header a,
-footer a {
-    color: #ffffff;
-}
-
-header a:hover,
-footer a:hover {
-    color: #e6f0ff;
-}
