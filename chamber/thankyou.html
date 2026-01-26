@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daniel Vilchez">
+    <meta name="description" content="Thank you page for joining the Lima Chamber of Commerce">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Lima Chamber of Commerce</title>
+
+    <!-- CSS existentes -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <!-- JS -->
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="64" height="64">
+                <p class="site-title-name">Lima Chamber of Commerce</p>
+            </a>
+
+            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
+            <button id="menu-toggle" class="menu-button" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        </div>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ================= END HEADER ================= -->
+
+    <!-- ================= MAIN ================= -->
+    <main class="thankyou-main">
+        <div class="form-container">
+            <h1>Thank You for Joining!</h1>
+            <p>We appreciate your interest in joining the Lima Chamber of Commerce.</p>
+
+            <div class="info">
+                <h2>Submitted Information</h2>
+                <p><strong>Name:</strong> <span id="name"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Mobile Phone:</strong> <span id="phone"></span></p>
+                <p><strong>Organization:</strong> <span id="org"></span></p>
+                <p><strong>Submitted At:</strong> <span id="time"></span></p>
+            </div>
+        </div>
+    </main>
+    <!-- ================= END MAIN ================= -->
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-grid">
+
+            <div class="footer-info">
+                <h2>Lima Chamber of Commerce</h2>
+                <p>Av. Ficticia 123, Office 456</p>
+                <p>Lima, Perú</p>
+                <p>Email: <a href="mailto:info@limachamber.org">info@limachamber.org</a></p>
+                <p>Phone: +51 1 555-1234</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><img src="images/youtube.jpg" alt="YouTube" width="32"></a>
+                <a href="#"><img src="images/twitterx-icon.jpg" alt="Twitter/X" width="32"></a>
+                <a href="#"><img src="images/linkedin.jpg" alt="LinkedIn" width="32"></a>
+            </div>
+
+            <div class="footer-dev-info">
+                <p>&copy; <span id="currentyear"></span> Lima Chamber of Commerce</p>
+                <p>Daniel Vilchez | WDD 231 Class Project</p>
+                <p>Last Modified: <span id="lastmodified"></span></p>
+            </div>
+
+        </div>
+    </footer>
+    <!-- ================= END FOOTER ================= -->
+
+</body>
+
+</html>
