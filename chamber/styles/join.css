@@ -66,7 +66,6 @@ input[type="submit"]:hover {
     gap: 2rem;
     max-width: 1200px;
     margin: 3rem auto 0 auto;
-    /* <- margen superior extra para separar del header */
 }
 
 .join-section {
@@ -157,7 +156,7 @@ input[type="submit"]:hover {
     position: relative;
     text-align: left;
     color: #000;
-    /* <-- CAMBIO: texto negro para buen contraste */
+    /* <-- texto negro para buen contraste */
 }
 
 .modal-content h3 {
@@ -218,11 +217,9 @@ legend {
     .form-and-cards {
         flex-direction: column;
         margin-top: 2rem;
-        /* un poco menos en móvil */
     }
 
     .membership-cards {
         margin-top: 1.5rem;
-        /* separa del formulario al apilar */
     }
 }
