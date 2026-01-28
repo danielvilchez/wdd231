@@ -1,6 +1,6 @@
 /* ===============================
    FORMULARIO
-   =============================== */
+=============================== */
 form {
     max-width: 800px;
     margin: 2rem auto;
@@ -59,13 +59,13 @@ input[type="submit"]:hover {
 
 /* ===============================
    FORM + CARDS LAYOUT
-   =============================== */
+=============================== */
 .form-and-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     max-width: 1200px;
-    margin: 3rem auto 0 auto;
+    margin: 3rem auto 0 auto; /* <- margen superior extra para separar del header */
 }
 
 .join-section {
@@ -81,7 +81,7 @@ input[type="submit"]:hover {
 
 /* ===============================
    MEMBERSHIP CARDS
-   =============================== */
+=============================== */
 .membership-card {
     background: #fff;
     padding: 1.5rem;
@@ -134,7 +134,7 @@ input[type="submit"]:hover {
 
 /* ===============================
    MODALES
-   =============================== */
+=============================== */
 .modal {
     display: none;
     position: fixed;
@@ -142,7 +142,7 @@ input[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgb(0, 0, 0);
     z-index: 1000;
 }
 
@@ -155,8 +155,6 @@ input[type="submit"]:hover {
     border-radius: 8px;
     position: relative;
     text-align: left;
-    color: #090057;
-    /* <-- texto negro para buen contraste */
 }
 
 .modal-content h3 {
@@ -184,7 +182,7 @@ input[type="submit"]:hover {
 
 /* ===============================
    ESTILOS ADICIONALES
-   =============================== */
+=============================== */
 fieldset {
     border: none;
     margin-bottom: 2rem;
@@ -203,7 +201,6 @@ legend {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -212,14 +209,14 @@ legend {
 
 /* ===============================
    RESPONSIVE: MÓVIL
-   =============================== */
+=============================== */
 @media (max-width: 768px) {
     .form-and-cards {
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: 2rem; /* un poco menos en móvil */
     }
 
     .membership-cards {
-        margin-top: 1.5rem;
+        margin-top: 1.5rem; /* separa del formulario al apilar */
     }
 }
