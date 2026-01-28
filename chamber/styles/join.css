@@ -1,10 +1,25 @@
 /* ===============================
+   VARIABLES DE COLOR
+   =============================== */
+:root {
+    --primary-color: #003366;
+    --focus-color: #0077cc;
+    --np-color: #2e7d32;
+    --bronze-color: #cd7f32;
+    --silver-color: #9e9e9e;
+    --gold-color: #d4af37;
+    --white: #ffffff;
+    --gray-light: #ccc;
+    --modal-bg: rgba(0, 0, 0, 0.7);
+}
+
+/* ===============================
    FORMULARIO
    =============================== */
 form {
     max-width: 800px;
     margin: 2rem auto;
-    background: #ffffff;
+    background: var(--white);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -24,7 +39,7 @@ select {
     margin-top: 0.25rem;
     font-size: 1.1rem;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--gray-light);
 }
 
 /* Resaltado de foco para accesibilidad */
@@ -32,7 +47,7 @@ input:focus,
 select:focus,
 textarea:focus,
 .view-btn:focus {
-    outline: 3px solid #0077cc;
+    outline: 3px solid var(--focus-color);
     outline-offset: 2px;
 }
 
@@ -46,14 +61,14 @@ input[type="submit"] {
     padding: 0.75rem;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: #003366;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #003366;
+    background-color: var(--primary-color);
     transition: all 0.3s ease-in-out;
 }
 
@@ -66,7 +81,6 @@ input[type="submit"]:hover {
     gap: 2rem;
     max-width: 1200px;
     margin: 3rem auto 0 auto;
-    /* <- margen superior extra para separar del header */
 }
 
 .join-section {
@@ -84,7 +98,7 @@ input[type="submit"]:hover {
    MEMBERSHIP CARDS
    =============================== */
 .membership-card {
-    background: #fff;
+    background: var(--white);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -93,10 +107,28 @@ input[type="submit"]:hover {
 }
 
 .membership-card h3 {
-    color: #fff;
+    color: var(--white);
     padding: 1rem;
     margin: -1.5rem -1.5rem 1rem -1.5rem;
     border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+/* Colores por nivel */
+.membership-card.np h3 {
+    background-color: var(--np-color);
+}
+
+.membership-card.bronze h3 {
+    background-color: var(--bronze-color);
+}
+
+.membership-card.silver h3 {
+    background-color: var(--silver-color);
+}
+
+.membership-card.gold h3 {
+    background-color: var(--gold-color);
 }
 
 /* Botón siempre visible */
@@ -104,8 +136,8 @@ input[type="submit"]:hover {
     display: inline-block;
     margin-top: 1rem;
     font-size: 1.1rem;
-    color: #fff;
-    background-color: #003366;
+    color: var(--white);
+    background-color: var(--primary-color);
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -113,24 +145,7 @@ input[type="submit"]:hover {
 }
 
 .membership-card .view-btn:hover {
-    background-color: #003366;
-}
-
-/* Colores por nivel */
-.membership-card.np h3 {
-    background-color: #2e7d32;
-}
-
-.membership-card.bronze h3 {
-    background-color: #cd7f32;
-}
-
-.membership-card.silver h3 {
-    background-color: #9e9e9e;
-}
-
-.membership-card.gold h3 {
-    background-color: #d4af37;
+    background-color: var(--primary-color);
 }
 
 /* ===============================
@@ -143,12 +158,12 @@ input[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--modal-bg);
     z-index: 1000;
 }
 
 .modal-content {
-    background: #fff;
+    background: var(--white);
     margin: 10% auto;
     padding: 2rem;
     width: 80%;
@@ -216,12 +231,10 @@ legend {
     .form-and-cards {
         flex-direction: column;
         margin-top: 2rem;
-        /* un poco menos en móvil */
     }
 
     .membership-cards {
         margin-top: 1.5rem;
-        /* separa del formulario al apilar */
     }
 }
 
@@ -231,17 +244,13 @@ legend {
 .thankyou-main {
     padding: 3rem 1rem;
     background-color: #f8f8f8;
-    /* min-height: 80vh; */
-    /* <- eliminar o reducir */
     min-height: auto;
-    /* o simplemente quítalo */
 }
-
 
 .form-container {
     max-width: 700px;
     margin: 0 auto;
-    background: #fff;
+    background: var(--white);
     padding: 2rem 2.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -252,7 +261,7 @@ legend {
 .form-container h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #003366;
+    color: var(--primary-color);
 }
 
 .form-container p {
@@ -268,7 +277,7 @@ legend {
 .info h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #003366;
+    color: var(--primary-color);
 }
 
 .info p {
@@ -277,5 +286,5 @@ legend {
 }
 
 .info strong {
-    color: #003366;
+    color: var(--primary-color);
 }
