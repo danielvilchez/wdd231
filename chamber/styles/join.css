@@ -375,10 +375,7 @@ input[type="submit"]:hover {
 }
 
 .modal-content {
-    background: #222;
-    /* fondo oscuro */
-    color: #fff;
-    /* texto blanco */
+    background: #fff;
     margin: 10% auto;
     padding: 2rem;
     width: 80%;
@@ -387,7 +384,6 @@ input[type="submit"]:hover {
     position: relative;
     text-align: left;
 }
-
 
 .modal-content h3 {
     margin-top: 0;
