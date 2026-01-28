@@ -29,6 +29,15 @@
 
     <!-- JS -->
     <script src="scripts/join.js" defer></script>
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Join the Lima Chamber of Commerce and Grow Your Business">
+    <meta property="og:description"
+        content="Become a member of the Lima Chamber of Commerce and connect with businesses, events, and networking opportunities.">
+    <meta property="og:image" content="https://danielvilchez.github.io/wdd231/chamber/images/og_join.png">
+    <meta property="og:url" content="https://danielvilchez.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
 </head>
 
 <body>
@@ -61,28 +70,64 @@
 
     <!-- ================= MAIN ================= -->
     <main class="join-layout">
+
+        <!-- H1 oculto para accesibilidad -->
         <h1 class="visually-hidden">Join the Lima Chamber of Commerce</h1>
 
         <div class="form-and-cards">
             <!-- FORMULARIO -->
             <section class="join-section">
+
                 <form method="get" action="thankyou.html">
+
+                    <!-- APPLICANT INFORMATION -->
                     <fieldset>
                         <legend>Applicant Information</legend>
-                        <label>First Name *<input type="text" name="first" required></label>
-                        <label>Last Name *<input type="text" name="last" required></label>
-                        <label>Organizational Title<input type="text" name="orgtitle" pattern="[A-Za-z\s\-]{7,}"
-                                placeholder="e.g. General Manager"></label>
-                        <label>Email Address *<input type="email" name="email" placeholder="example@business.com"
-                                required></label>
-                        <label>Mobile Phone *<input type="tel" name="phone" required></label>
+
+                        <label>
+                            First Name *
+                            <input type="text" name="first" title="Applicant first name" autocomplete="given-name"
+                                required>
+                        </label>
+
+                        <label>
+                            Last Name *
+                            <input type="text" name="last" title="Applicant last name" autocomplete="family-name"
+                                required>
+                        </label>
+
+                        <label>
+                            Organizational Title
+                            <input type="text" name="orgtitle" title="Your position within the organization"
+                                autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
+                                placeholder="e.g. General Manager">
+                        </label>
+
+                        <label>
+                            Email Address *
+                            <input type="email" name="email" title="Valid email address" autocomplete="email"
+                                placeholder="example@business.com" required>
+                        </label>
+
+                        <label>
+                            Mobile Phone *
+                            <input type="tel" name="phone" title="Mobile phone number" autocomplete="tel" required>
+                        </label>
                     </fieldset>
 
+                    <!-- ORGANIZATION INFORMATION -->
                     <fieldset>
                         <legend>Organization Information</legend>
-                        <label>Organization Name *<input type="text" name="organization" required></label>
-                        <label>Membership Level *
-                            <select name="membership" required>
+
+                        <label>
+                            Organization Name *
+                            <input type="text" name="organization" title="Business or organization name"
+                                autocomplete="organization" required>
+                        </label>
+
+                        <label>
+                            Membership Level *
+                            <select name="membership" title="Select membership level" required>
                                 <option value="" disabled selected>Select a level</option>
                                 <option value="np">NP Membership (Non-Profit)</option>
                                 <option value="bronze">Bronze Membership</option>
@@ -90,12 +135,19 @@
                                 <option value="gold">Gold Membership</option>
                             </select>
                         </label>
-                        <label>Organization Description<textarea name="description"></textarea></label>
+
+                        <label>
+                            Organization Description
+                            <textarea name="description" title="Brief description of the organization"></textarea>
+                        </label>
                     </fieldset>
 
-                    <input type="hidden" name="timestamp" id="timestamp">
+                    <!-- TIMESTAMP -->
+                    <input type="hidden" name="timestamp" id="timestamp" value="2026-01-28T00:00:00">
 
+                    <!-- SUBMIT -->
                     <input type="submit" value="Apply for Membership">
+
                 </form>
             </section>
 
@@ -125,64 +177,67 @@
                     <a class="view-btn" data-modal="goldModal">View Benefits</a>
                 </div>
             </aside>
-        </div>
 
-        <!-- ================= MODALES ================= -->
-        <div id="npModal" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="npModal">&times;</span>
-                <h2>NP Membership Benefits</h2>
-                <ul>
-                    <li>Free listing</li>
-                    <li>Basic newsletter access</li>
-                </ul>
+            <!-- ================= MODALES ================= -->
+            <div id="npModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal="npModal">&times;</span>
+                    <h2>NP Membership Benefits</h2>
+                    <ul>
+                        <li>Free listing</li>
+                        <li>Basic newsletter access</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div id="bronzeModal" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="bronzeModal">&times;</span>
-                <h2>Bronze Membership Benefits</h2>
-                <ul>
-                    <li>Training sessions</li>
-                    <li>Event participation</li>
-                </ul>
+            <div id="bronzeModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal="bronzeModal">&times;</span>
+                    <h2>Bronze Membership Benefits</h2>
+                    <ul>
+                        <li>Training sessions</li>
+                        <li>Event participation</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div id="silverModal" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="silverModal">&times;</span>
-                <h2>Silver Membership Benefits</h2>
-                <ul>
-                    <li>Event discounts</li>
-                    <li>Spotlight ads</li>
-                </ul>
+            <div id="silverModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal="silverModal">&times;</span>
+                    <h2>Silver Membership Benefits</h2>
+                    <ul>
+                        <li>Event discounts</li>
+                        <li>Spotlight ads</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div id="goldModal" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="goldModal">&times;</span>
-                <h2>Gold Membership Benefits</h2>
-                <ul>
-                    <li>All benefits of Silver</li>
-                    <li>Custom promotions</li>
-                    <li>Priority support</li>
-                </ul>
+            <div id="goldModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal="goldModal">&times;</span>
+                    <h2>Gold Membership Benefits</h2>
+                    <ul>
+                        <li>All benefits of Silver</li>
+                        <li>Custom promotions</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
             </div>
-        </div>
+
 
     </main>
 
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="footer-grid">
+
             <div class="footer-info">
                 <h2>Lima Chamber of Commerce</h2>
                 <p>Av. Ficticia 123, Office 456</p>
                 <p>Lima, Perú</p>
-                <p>Email: <a href="mailto:info@limachamber.org">info@limachamber.org</a></p>
+                <p>Email:
+                    <a href="mailto:info@limachamber.org">info@limachamber.org</a>
+                </p>
                 <p>Phone: +51 1 555-1234</p>
             </div>
 
@@ -197,211 +252,7 @@
                 <p>Daniel Vilchez | WDD 231 Class Project</p>
                 <p>Last Modified: <span id="lastmodified"></span></p>
             </div>
-        </div>
-    </footer>
 
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Daniel Vilchez">
-    <meta name="description"
-        content="Join the Lima Chamber of Commerce. Apply for membership and become part of our business community.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Join the Chamber | Lima</title>
-
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    </noscript>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/join.css">
-
-    <!-- JS -->
-    <script src="scripts/join.js" defer></script>
-</head>
-
-<body>
-
-    <!-- ================= HEADER ================= -->
-    <header>
-        <div class="header-content">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="64" height="64">
-                <p class="site-title-name">Lima Chamber of Commerce</p>
-            </a>
-
-            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
-            <button id="menu-toggle" class="menu-button" aria-controls="primary-nav" aria-expanded="false">
-                ☰
-            </button>
-        </div>
-
-        <nav class="main-nav" aria-label="Main Navigation">
-            <ul id="primary-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Business Directory</a></li>
-                <li><a href="join.html" class="active">Join</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- ================= MAIN ================= -->
-    <main class="join-layout">
-        <h1 class="visually-hidden">Join the Lima Chamber of Commerce</h1>
-
-        <div class="form-and-cards">
-            <!-- FORMULARIO -->
-            <section class="join-section">
-                <form method="get" action="thankyou.html">
-                    <fieldset>
-                        <legend>Applicant Information</legend>
-                        <label>First Name *<input type="text" name="first" required></label>
-                        <label>Last Name *<input type="text" name="last" required></label>
-                        <label>Organizational Title<input type="text" name="orgtitle" pattern="[A-Za-z\s\-]{7,}"
-                                placeholder="e.g. General Manager"></label>
-                        <label>Email Address *<input type="email" name="email" placeholder="example@business.com"
-                                required></label>
-                        <label>Mobile Phone *<input type="tel" name="phone" required></label>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Organization Information</legend>
-                        <label>Organization Name *<input type="text" name="organization" required></label>
-                        <label>Membership Level *
-                            <select name="membership" required>
-                                <option value="" disabled selected>Select a level</option>
-                                <option value="np">NP Membership (Non-Profit)</option>
-                                <option value="bronze">Bronze Membership</option>
-                                <option value="silver">Silver Membership</option>
-                                <option value="gold">Gold Membership</option>
-                            </select>
-                        </label>
-                        <label>Organization Description<textarea name="description"></textarea></label>
-                    </fieldset>
-
-                    <input type="hidden" name="timestamp" id="timestamp">
-
-                    <input type="submit" value="Apply for Membership">
-                </form>
-            </section>
-
-            <!-- ================= MEMBERSHIP CARDS ================= -->
-            <aside class="membership-cards">
-                <div class="membership-card np">
-                    <h2>NP Membership</h2>
-                    <p>No fee for non-profit organizations.</p>
-                    <a class="view-btn" data-modal="npModal">View Benefits</a>
-                </div>
-
-                <div class="membership-card bronze">
-                    <h2>Bronze Membership</h2>
-                    <p>Basic exposure and networking.</p>
-                    <a class="view-btn" data-modal="bronzeModal">View Benefits</a>
-                </div>
-
-                <div class="membership-card silver">
-                    <h2>Silver Membership</h2>
-                    <p>More visibility and training.</p>
-                    <a class="view-btn" data-modal="silverModal">View Benefits</a>
-                </div>
-
-                <div class="membership-card gold">
-                    <h2>Gold Membership</h2>
-                    <p>Maximum promotion and benefits.</p>
-                    <a class="view-btn" data-modal="goldModal">View Benefits</a>
-                </div>
-            </aside>
-        </div>
-
-        <!-- ================= MODALES ================= -->
-        <div id="npModal" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="npModal">&times;</span>
-                <h2>NP Membership Benefits</h2>
-                <ul>
-                    <li>Free listing</li>
-                    <li>Basic newsletter access</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="bronzeModal" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="bronzeModal">&times;</span>
-                <h2>Bronze Membership Benefits</h2>
-                <ul>
-                    <li>Training sessions</li>
-                    <li>Event participation</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="silverModal" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="silverModal">&times;</span>
-                <h2>Silver Membership Benefits</h2>
-                <ul>
-                    <li>Event discounts</li>
-                    <li>Spotlight ads</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="goldModal" class="modal">
-            <div class="modal-content">
-                <span class="close" data-modal="goldModal">&times;</span>
-                <h2>Gold Membership Benefits</h2>
-                <ul>
-                    <li>All benefits of Silver</li>
-                    <li>Custom promotions</li>
-                    <li>Priority support</li>
-                </ul>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-info">
-                <h2>Lima Chamber of Commerce</h2>
-                <p>Av. Ficticia 123, Office 456</p>
-                <p>Lima, Perú</p>
-                <p>Email: <a href="mailto:info@limachamber.org">info@limachamber.org</a></p>
-                <p>Phone: +51 1 555-1234</p>
-            </div>
-
-            <div class="footer-social">
-                <a href="#"><img src="images/youtube.jpg" alt="YouTube" width="32"></a>
-                <a href="#"><img src="images/twitterx-icon.jpg" alt="Twitter/X" width="32"></a>
-                <a href="#"><img src="images/linkedin.jpg" alt="LinkedIn" width="32"></a>
-            </div>
-
-            <div class="footer-dev-info">
-                <p>&copy; <span id="currentyear"></span> Lima Chamber of Commerce</p>
-                <p>Daniel Vilchez | WDD 231 Class Project</p>
-                <p>Last Modified: <span id="lastmodified"></span></p>
-            </div>
         </div>
     </footer>
 
