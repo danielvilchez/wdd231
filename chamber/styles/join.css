@@ -65,7 +65,8 @@ input[type="submit"]:hover {
     flex-wrap: wrap;
     gap: 2rem;
     max-width: 1200px;
-    margin: 3rem auto 0 auto; /* <- margen superior extra para separar del header */
+    margin: 3rem auto 0 auto;
+    /* <- margen superior extra para separar del header */
 }
 
 .join-section {
@@ -142,7 +143,7 @@ input[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.253);
     z-index: 1000;
 }
 
@@ -201,6 +202,7 @@ legend {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -213,10 +215,12 @@ legend {
 @media (max-width: 768px) {
     .form-and-cards {
         flex-direction: column;
-        margin-top: 2rem; /* un poco menos en móvil */
+        margin-top: 2rem;
+        /* un poco menos en móvil */
     }
 
     .membership-cards {
-        margin-top: 1.5rem; /* separa del formulario al apilar */
+        margin-top: 1.5rem;
+        /* separa del formulario al apilar */
     }
 }
