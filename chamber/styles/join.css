@@ -1,49 +1,13 @@
 /* ===============================
-   VARIABLES DE COLOR
-   =============================== */
-:root {
-    --primary-color: #003366;
-    --focus-color: #0077cc;
-    --np-color: #2e7d32;
-    --bronze-color: #cd7f32;
-    --silver-color: #9e9e9e;
-    --gold-color: #d4af37;
-    --white: #ffffff;
-    --light-bg: #f8f8f8;
-    --card-shadow: rgba(0, 0, 0, 0.15);
-    --form-shadow: rgba(0, 0, 0, 0.1);
-}
-
-/* ===============================
-   REUTILIZABLES
-   =============================== */
-.button-style {
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-.view-btn:focus {
-    outline: 3px solid var(--focus-color);
-    outline-offset: 2px;
-}
-
-/* ===============================
    FORMULARIO
    =============================== */
 form {
     max-width: 800px;
     margin: 2rem auto;
-    background: var(--white);
+    background: #ffffff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px var(--form-shadow);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -63,26 +27,34 @@ select {
     border: 1px solid #ccc;
 }
 
+/* Resaltado de foco para accesibilidad */
+input:focus,
+select:focus,
+textarea:focus,
+.view-btn:focus {
+    outline: 3px solid #0077cc;
+    outline-offset: 2px;
+}
+
 textarea {
     min-height: 120px;
 }
 
+/* Submit button */
 input[type="submit"] {
     margin-top: 1.5rem;
+    padding: 0.75rem;
     font-size: 1.2rem;
-    background-color: var(--primary-color);
-    color: var(--white);
+    font-weight: bold;
+    background-color: #003366;
+    color: #fff;
     border: none;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: var(--primary-color);
+    background-color: #003366;
     transition: all 0.3s ease-in-out;
-}
-
-input[type="submit"],
-.membership-card .view-btn {
-    composes: button-style;
 }
 
 /* ===============================
@@ -94,6 +66,7 @@ input[type="submit"],
     gap: 2rem;
     max-width: 1200px;
     margin: 3rem auto 0 auto;
+    /* <- margen superior extra para separar del header */
 }
 
 .join-section {
@@ -111,16 +84,16 @@ input[type="submit"],
    MEMBERSHIP CARDS
    =============================== */
 .membership-card {
-    background: var(--white);
+    background: #fff;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 1.95px 1.95px 2.6px var(--card-shadow);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     text-align: center;
     animation: fadeIn 1.5s ease-in forwards;
 }
 
-.membership-card h2 {
-    color: var(--white);
+.membership-card h3 {
+    color: #fff;
     padding: 1rem;
     margin: -1.5rem -1.5rem 1rem -1.5rem;
     border-radius: 8px 8px 0 0;
@@ -128,30 +101,36 @@ input[type="submit"],
 
 /* Botón siempre visible */
 .membership-card .view-btn {
+    display: inline-block;
+    margin-top: 1rem;
     font-size: 1.1rem;
-    color: var(--white);
-    background-color: var(--primary-color);
+    color: #fff;
+    background-color: #003366;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .membership-card .view-btn:hover {
-    background-color: var(--primary-color);
+    background-color: #003366;
 }
 
 /* Colores por nivel */
-.membership-card.np h2 {
-    background-color: var(--np-color);
+.membership-card.np h3 {
+    background-color: #2e7d32;
 }
 
-.membership-card.bronze h2 {
-    background-color: var(--bronze-color);
+.membership-card.bronze h3 {
+    background-color: #cd7f32;
 }
 
-.membership-card.silver h2 {
-    background-color: var(--silver-color);
+.membership-card.silver h3 {
+    background-color: #9e9e9e;
 }
 
-.membership-card.gold h2 {
-    background-color: var(--gold-color);
+.membership-card.gold h3 {
+    background-color: #d4af37;
 }
 
 /* ===============================
@@ -169,7 +148,7 @@ input[type="submit"],
 }
 
 .modal-content {
-    background: var(--white);
+    background: #fff;
     margin: 10% auto;
     padding: 2rem;
     width: 80%;
@@ -180,7 +159,8 @@ input[type="submit"],
 }
 
 .modal-content h3 {
-    margin: 0 0 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -230,65 +210,18 @@ legend {
 }
 
 /* ===============================
-   RESPONSIVE
+   RESPONSIVE: MÓVIL
    =============================== */
 @media (max-width: 768px) {
     .form-and-cards {
         flex-direction: column;
         margin-top: 2rem;
+        /* un poco menos en móvil */
     }
 
     .membership-cards {
         margin-top: 1.5rem;
+        /* separa del formulario al apilar */
     }
 }
 
-/* ===============================
-   Thank You Page
-   =============================== */
-.thankyou-main {
-    padding: 3rem 1rem;
-    background-color: var(--light-bg);
-}
-
-.form-container {
-    max-width: 700px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 2rem 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px var(--form-shadow);
-    animation: fadeIn 1.5s ease-in;
-    text-align: center;
-}
-
-.form-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.form-container p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.info {
-    text-align: left;
-    margin-top: 1.5rem;
-}
-
-.info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.info p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.info strong {
-    color: var(--primary-color);
-}
