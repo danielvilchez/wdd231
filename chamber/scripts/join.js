@@ -2,25 +2,41 @@
 document.getElementById("timestamp").value = new Date().toLocaleString();
 
 // ===================== MODALES =====================
+
 // Abrir modal
 function openModal(id) {
-    document.getElementById(id).style.display = "block";
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = "block";
 }
 
 // Cerrar modal
 function closeModal(id) {
-    document.getElementById(id).style.display = "none";
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = "none";
 }
 
-// Cerrar modal si se hace click fuera del contenido
-window.onclick = function (event) {
-    const modals = document.querySelectorAll(".modal");
-    modals.forEach(modal => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
+// Asignar eventos a botones "View Benefits"
+document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const modalId = btn.dataset.modal;
+        openModal(modalId);
     });
-}
+});
+
+// Asignar eventos a botones "Close"
+document.querySelectorAll('.modal .close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const modalId = btn.dataset.modal;
+        closeModal(modalId);
+    });
+});
+
+// Cerrar modal si clic fuera del contenido
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', e => {
+        if (e.target === modal) modal.style.display = "none";
+    });
+});
 
 // ===================== THANK YOU PAGE (opcional) =====================
 function getParam(name) {
@@ -28,7 +44,6 @@ function getParam(name) {
     return params.get(name) || "";
 }
 
-// Solo si tienes un thankyou.html con estos elementos
 const thankYouFields = ["firstname", "lastname", "email", "mobile", "organization", "timestamp"];
 thankYouFields.forEach(id => {
     const el = document.getElementById(id);
