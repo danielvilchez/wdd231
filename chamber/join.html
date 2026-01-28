@@ -31,7 +31,7 @@
     <script src="scripts/join.js" defer></script>
 
     <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:title" content="Join the Lima Chamber of Commerce">
+    <meta property="og:title" content="Join the Lima Chamber of Commerce and Grow Your Business">
     <meta property="og:description"
         content="Become a member of the Lima Chamber of Commerce and connect with businesses, events, and networking opportunities.">
     <meta property="og:image" content="https://danielvilchez.github.io/wdd231/chamber/images/og_join.png">
@@ -71,9 +71,14 @@
     <!-- ================= MAIN ================= -->
     <main class="join-layout">
 
+        <!-- Main page heading (required, hidden visually) -->
+        <h1 class="visually-hidden">Join the Lima Chamber of Commerce</h1>
+
         <div class="form-and-cards">
-            <!-- FORMULARIO -->
+
+            <!-- ================= FORM ================= -->
             <section class="join-section">
+                <h2 class="visually-hidden">Membership Application Form</h2>
 
                 <form method="get" action="thankyou.html">
 
@@ -83,32 +88,29 @@
 
                         <label>
                             First Name *
-                            <input type="text" name="first" title="Applicant first name" autocomplete="given-name"
-                                required>
+                            <input type="text" name="first" autocomplete="given-name" required>
                         </label>
 
                         <label>
                             Last Name *
-                            <input type="text" name="last" title="Applicant last name" autocomplete="family-name"
-                                required>
+                            <input type="text" name="last" autocomplete="family-name" required>
                         </label>
 
                         <label>
                             Organizational Title
-                            <input type="text" name="orgtitle" title="Your position within the organization"
-                                autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
-                                placeholder="e.g. General Manager">
+                            <input type="text" name="orgtitle" autocomplete="organization-title"
+                                pattern="[A-Za-z\s\-]{7,}" placeholder="e.g. General Manager">
                         </label>
 
                         <label>
                             Email Address *
-                            <input type="email" name="email" title="Valid email address" autocomplete="email"
-                                placeholder="example@business.com" required>
+                            <input type="email" name="email" autocomplete="email" placeholder="example@business.com"
+                                required>
                         </label>
 
                         <label>
                             Mobile Phone *
-                            <input type="tel" name="phone" title="Mobile phone number" autocomplete="tel" required>
+                            <input type="tel" name="phone" autocomplete="tel" required>
                         </label>
                     </fieldset>
 
@@ -118,13 +120,12 @@
 
                         <label>
                             Organization Name *
-                            <input type="text" name="organization" title="Business or organization name"
-                                autocomplete="organization" required>
+                            <input type="text" name="organization" autocomplete="organization" required>
                         </label>
 
                         <label>
                             Membership Level *
-                            <select name="membership" title="Select membership level" required>
+                            <select name="membership" required>
                                 <option value="" disabled selected>Select a level</option>
                                 <option value="np">NP Membership (Non-Profit)</option>
                                 <option value="bronze">Bronze Membership</option>
@@ -135,7 +136,7 @@
 
                         <label>
                             Organization Description
-                            <textarea name="description" title="Brief description of the organization"></textarea>
+                            <textarea name="description"></textarea>
                         </label>
                     </fieldset>
 
@@ -150,6 +151,8 @@
 
             <!-- ================= MEMBERSHIP CARDS ================= -->
             <aside class="membership-cards">
+                <h2 class="visually-hidden">Membership Levels</h2>
+
                 <div class="membership-card np">
                     <h3>NP Membership</h3>
                     <p>No fee for non-profit organizations.</p>
@@ -174,13 +177,14 @@
                     <a class="view-btn" onclick="openModal('goldModal')">View Benefits</a>
                 </div>
             </aside>
+
         </div>
 
-        <!-- ================= MODALES ================= -->
+        <!-- ================= MODALS ================= -->
         <div id="npModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('npModal')">&times;</span>
-                <h3>NP Membership Benefits</h3>
+                <h2>NP Membership Benefits</h2>
                 <ul>
                     <li>Free listing</li>
                     <li>Basic newsletter access</li>
@@ -191,7 +195,7 @@
         <div id="bronzeModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
-                <h3>Bronze Membership Benefits</h3>
+                <h2>Bronze Membership Benefits</h2>
                 <ul>
                     <li>Training sessions</li>
                     <li>Event participation</li>
@@ -202,7 +206,7 @@
         <div id="silverModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('silverModal')">&times;</span>
-                <h3>Silver Membership Benefits</h3>
+                <h2>Silver Membership Benefits</h2>
                 <ul>
                     <li>Event discounts</li>
                     <li>Spotlight ads</li>
@@ -213,7 +217,7 @@
         <div id="goldModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('goldModal')">&times;</span>
-                <h3>Gold Membership Benefits</h3>
+                <h2>Gold Membership Benefits</h2>
                 <ul>
                     <li>All benefits of Silver</li>
                     <li>Custom promotions</li>
