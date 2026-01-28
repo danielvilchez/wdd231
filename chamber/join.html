@@ -31,7 +31,7 @@
     <script src="scripts/join.js" defer></script>
 
     <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:title" content="Join the Lima Chamber of Commerce">
+    <meta property="og:title" content="Join the Lima Chamber of Commerce and Grow Your Business">
     <meta property="og:description"
         content="Become a member of the Lima Chamber of Commerce and connect with businesses, events, and networking opportunities.">
     <meta property="og:image" content="https://danielvilchez.github.io/wdd231/chamber/images/og_join.png">
@@ -70,6 +70,9 @@
 
     <!-- ================= MAIN ================= -->
     <main class="join-layout">
+
+        <!-- H1 oculto para accesibilidad -->
+        <h1 class="visually-hidden">Join the Lima Chamber of Commerce</h1>
 
         <div class="form-and-cards">
             <!-- FORMULARIO -->
@@ -151,25 +154,25 @@
             <!-- ================= MEMBERSHIP CARDS ================= -->
             <aside class="membership-cards">
                 <div class="membership-card np">
-                    <h3>NP Membership</h3>
+                    <h2>NP Membership</h2>
                     <p>No fee for non-profit organizations.</p>
                     <a class="view-btn" onclick="openModal('npModal')">View Benefits</a>
                 </div>
 
                 <div class="membership-card bronze">
-                    <h3>Bronze Membership</h3>
+                    <h2>Bronze Membership</h2>
                     <p>Basic exposure and networking.</p>
                     <a class="view-btn" onclick="openModal('bronzeModal')">View Benefits</a>
                 </div>
 
                 <div class="membership-card silver">
-                    <h3>Silver Membership</h3>
+                    <h2>Silver Membership</h2>
                     <p>More visibility and training.</p>
                     <a class="view-btn" onclick="openModal('silverModal')">View Benefits</a>
                 </div>
 
                 <div class="membership-card gold">
-                    <h3>Gold Membership</h3>
+                    <h2>Gold Membership</h2>
                     <p>Maximum promotion and benefits.</p>
                     <a class="view-btn" onclick="openModal('goldModal')">View Benefits</a>
                 </div>
@@ -180,7 +183,7 @@
         <div id="npModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('npModal')">&times;</span>
-                <h3>NP Membership Benefits</h3>
+                <h2>NP Membership Benefits</h2>
                 <ul>
                     <li>Free listing</li>
                     <li>Basic newsletter access</li>
@@ -191,7 +194,7 @@
         <div id="bronzeModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
-                <h3>Bronze Membership Benefits</h3>
+                <h2>Bronze Membership Benefits</h2>
                 <ul>
                     <li>Training sessions</li>
                     <li>Event participation</li>
@@ -202,7 +205,7 @@
         <div id="silverModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('silverModal')">&times;</span>
-                <h3>Silver Membership Benefits</h3>
+                <h2>Silver Membership Benefits</h2>
                 <ul>
                     <li>Event discounts</li>
                     <li>Spotlight ads</li>
@@ -213,7 +216,7 @@
         <div id="goldModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('goldModal')">&times;</span>
-                <h3>Gold Membership Benefits</h3>
+                <h2>Gold Membership Benefits</h2>
                 <ul>
                     <li>All benefits of Silver</li>
                     <li>Custom promotions</li>
