@@ -224,3 +224,234 @@ legend {
         /* separa del formulario al apilar */
     }
 }
+
+/* ===============================
+   FORMULARIO
+=============================== */
+form {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Resaltado de foco para accesibilidad */
+input:focus,
+select:focus,
+textarea:focus,
+.view-btn:focus {
+    outline: 3px solid #0077cc;
+    outline-offset: 2px;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+/* Submit button */
+input[type="submit"] {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #003366;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ===============================
+   FORM + CARDS LAYOUT
+=============================== */
+.form-and-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0 auto;
+    /* <- margen superior extra para separar del header */
+}
+
+.join-section {
+    flex: 2 1 500px;
+}
+
+.membership-cards {
+    flex: 1 1 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* ===============================
+   MEMBERSHIP CARDS
+=============================== */
+.membership-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.membership-card h3 {
+    color: #fff;
+    padding: 1rem;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Botón siempre visible */
+.membership-card .view-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #003366;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.membership-card .view-btn:hover {
+    background-color: #003366;
+}
+
+/* Colores por nivel */
+.membership-card.np h3 {
+    background-color: #2e7d32;
+}
+
+.membership-card.bronze h3 {
+    background-color: #cd7f32;
+}
+
+.membership-card.silver h3 {
+    background-color: #9e9e9e;
+}
+
+.membership-card.gold h3 {
+    background-color: #d4af37;
+}
+
+/* ===============================
+   MODALES
+=============================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #222;
+    /* fondo oscuro */
+    color: #fff;
+    /* texto blanco */
+    margin: 10% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+    text-align: left;
+}
+
+
+.modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.modal-content ul {
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.modal-content li {
+    margin-bottom: 0.5rem;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ===============================
+   ESTILOS ADICIONALES
+=============================== */
+fieldset {
+    border: none;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   RESPONSIVE: MÓVIL
+=============================== */
+@media (max-width: 768px) {
+    .form-and-cards {
+        flex-direction: column;
+        margin-top: 2rem;
+        /* un poco menos en móvil */
+    }
+
+    .membership-cards {
+        margin-top: 1.5rem;
+        /* separa del formulario al apilar */
+    }
+}
