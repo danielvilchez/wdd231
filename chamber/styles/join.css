@@ -145,9 +145,6 @@ input[type="submit"]:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-
-    /* 🟢 Contraste WCAG AA: texto blanco sobre overlay oscuro */
-    color: #ffffff;
 }
 
 .modal-content {
@@ -159,9 +156,8 @@ input[type="submit"]:hover {
     border-radius: 8px;
     position: relative;
     text-align: left;
-
-    /* Los textos dentro del contenido siguen siendo negros */
     color: #000;
+    /* <-- CAMBIO: texto negro para buen contraste */
 }
 
 .modal-content h3 {
