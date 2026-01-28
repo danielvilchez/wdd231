@@ -30,14 +30,13 @@
     <!-- JS -->
     <script src="scripts/join.js" defer></script>
 
-    <!-- Open Graph / Facebook Meta Tags -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Join the Lima Chamber of Commerce and Grow Your Business">
     <meta property="og:description"
         content="Become a member of the Lima Chamber of Commerce and connect with businesses, events, and networking opportunities.">
     <meta property="og:image" content="https://danielvilchez.github.io/wdd231/chamber/images/og_join.png">
     <meta property="og:url" content="https://danielvilchez.github.io/wdd231/chamber/join.html">
     <meta property="og:type" content="website">
-
 </head>
 
 <body>
@@ -71,7 +70,7 @@
     <!-- ================= MAIN ================= -->
     <main class="join-layout">
 
-        <!-- Main page heading (required, hidden visually) -->
+        <!-- Required main heading (hidden, does NOT affect styles) -->
         <h1 class="visually-hidden">Join the Lima Chamber of Commerce</h1>
 
         <div class="form-and-cards">
@@ -82,7 +81,6 @@
 
                 <form method="get" action="thankyou.html">
 
-                    <!-- APPLICANT INFORMATION -->
                     <fieldset>
                         <legend>Applicant Information</legend>
 
@@ -114,7 +112,6 @@
                         </label>
                     </fieldset>
 
-                    <!-- ORGANIZATION INFORMATION -->
                     <fieldset>
                         <legend>Organization Information</legend>
 
@@ -140,12 +137,9 @@
                         </label>
                     </fieldset>
 
-                    <!-- TIMESTAMP -->
                     <input type="hidden" name="timestamp" id="timestamp">
 
-                    <!-- SUBMIT -->
                     <input type="submit" value="Apply for Membership">
-
                 </form>
             </section>
 
@@ -177,7 +171,6 @@
                     <a class="view-btn" onclick="openModal('goldModal')">View Benefits</a>
                 </div>
             </aside>
-
         </div>
 
         <!-- ================= MODALS ================= -->
@@ -231,7 +224,6 @@
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="footer-grid">
-
             <div class="footer-info">
                 <h2>Lima Chamber of Commerce</h2>
                 <p>Av. Ficticia 123, Office 456</p>
@@ -253,7 +245,6 @@
                 <p>Daniel Vilchez | WDD 231 Class Project</p>
                 <p>Last Modified: <span id="lastmodified"></span></p>
             </div>
-
         </div>
     </footer>
 
