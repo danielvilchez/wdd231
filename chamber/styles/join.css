@@ -155,7 +155,7 @@ input[type="submit"]:hover {
     border-radius: 8px;
     position: relative;
     text-align: left;
-    color: #000;
+    color: #090057;
     /* <-- texto negro para buen contraste */
 }
 
