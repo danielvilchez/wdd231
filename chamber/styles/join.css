@@ -156,7 +156,6 @@ input[type="submit"]:hover {
     border-radius: 8px;
     position: relative;
     text-align: left;
-    color: #000000;
 }
 
 .modal-content h3 {
