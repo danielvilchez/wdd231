@@ -11,6 +11,27 @@
     --white: #ffffff;
     --gray-light: #ccc;
     --modal-bg: rgba(0, 0, 0, 0.7);
+    --shadow-light: 0 0 10px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   REUTILIZABLES
+   =============================== */
+.fade-in {
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.shadow-light {
+    box-shadow: var(--shadow-light);
+}
+
+.shadow-medium {
+    box-shadow: var(--shadow-medium);
+}
+
+.rounded {
+    border-radius: 8px;
 }
 
 /* ===============================
@@ -22,7 +43,7 @@ form {
     background: var(--white);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-light);
 }
 
 label {
@@ -103,9 +124,7 @@ input[type="submit"]:hover {
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     text-align: center;
-    animation: fadeIn 1.5s ease-in forwards;
 }
-
 .membership-card h3 {
     color: var(--white);
     padding: 1rem;
@@ -115,21 +134,10 @@ input[type="submit"]:hover {
 }
 
 /* Colores por nivel */
-.membership-card.np h3 {
-    background-color: var(--np-color);
-}
-
-.membership-card.bronze h3 {
-    background-color: var(--bronze-color);
-}
-
-.membership-card.silver h3 {
-    background-color: var(--silver-color);
-}
-
-.membership-card.gold h3 {
-    background-color: var(--gold-color);
-}
+.membership-card.np h3 { background-color: var(--np-color); }
+.membership-card.bronze h3 { background-color: var(--bronze-color); }
+.membership-card.silver h3 { background-color: var(--silver-color); }
+.membership-card.gold h3 { background-color: var(--gold-color); }
 
 /* Botón siempre visible */
 .membership-card .view-btn {
@@ -143,10 +151,7 @@ input[type="submit"]:hover {
     border-radius: 4px;
     cursor: pointer;
 }
-
-.membership-card .view-btn:hover {
-    background-color: var(--primary-color);
-}
+.membership-card .view-btn:hover { background-color: var(--primary-color); }
 
 /* ===============================
    MODALES
@@ -174,19 +179,12 @@ input[type="submit"]:hover {
 }
 
 .modal-content h3 {
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
     text-align: center;
 }
 
-.modal-content ul {
-    padding-left: 1.5rem;
-    margin: 0;
-}
-
-.modal-content li {
-    margin-bottom: 0.5rem;
-}
+.modal-content ul { padding-left: 1.5rem; margin:0; }
+.modal-content li { margin-bottom:0.5rem; }
 
 .modal-content .close {
     position: absolute;
@@ -199,92 +197,44 @@ input[type="submit"]:hover {
 /* ===============================
    ESTILOS ADICIONALES
    =============================== */
-fieldset {
-    border: none;
-    margin-bottom: 2rem;
-    padding: 0;
-}
+fieldset { border: none; margin-bottom: 2rem; padding:0; }
+legend { font-size:1.5rem; font-weight:bold; margin-bottom:1rem; }
 
-legend {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-/* Animación */
+/* ===============================
+   ANIMACIÓN
+   =============================== */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity:0; transform:translateY(20px);}
+    to { opacity:1; transform:translateY(0);}
 }
 
 /* ===============================
-   RESPONSIVE: MÓVIL
+   RESPONSIVE
    =============================== */
-@media (max-width: 768px) {
-    .form-and-cards {
-        flex-direction: column;
-        margin-top: 2rem;
-    }
-
-    .membership-cards {
-        margin-top: 1.5rem;
-    }
+@media (max-width:768px) {
+    .form-and-cards { flex-direction: column; margin-top:2rem; }
+    .membership-cards { margin-top:1.5rem; }
 }
 
 /* ===============================
-   Thank You Page
+   THANK YOU PAGE
    =============================== */
-.thankyou-main {
-    padding: 3rem 1rem;
-    background-color: #f8f8f8;
-    min-height: auto;
-}
+.thankyou-main { padding: 3rem 1rem; background-color: #f8f8f8; }
 
 .form-container {
     max-width: 700px;
-    margin: 0 auto;
+    margin:0 auto;
     background: var(--white);
-    padding: 2rem 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1.5s ease-in;
-    text-align: center;
+    padding:2rem 2.5rem;
+    border-radius:10px;
+    box-shadow: var(--shadow-medium);
+    text-align:center;
 }
 
-.form-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
+.form-container h1 { font-size:2.5rem; margin-bottom:1rem; color: var(--primary-color); }
+.form-container p { font-size:1.2rem; margin-bottom:2rem; }
 
-.form-container p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.info {
-    text-align: left;
-    margin-top: 1.5rem;
-}
-
-.info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.info p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.info strong {
-    color: var(--primary-color);
-}
+.info { text-align:left; margin-top:1.5rem; }
+.info h2 { font-size:1.5rem; margin-bottom:1rem; color: var(--primary-color); }
+.info p { font-size:1.1rem; margin-bottom:0.5rem; }
+.info strong { color: var(--primary-color); }
