@@ -35,6 +35,19 @@ document.querySelectorAll('.modal').forEach(modal => {
     });
 });
 
+// ===================== MENU =====================
+const menuButton = document.getElementById("menu-toggle");
+const nav = document.querySelector(".main-nav");
+
+if (menuButton && nav) {
+  menuButton.addEventListener("click", () => {
+    nav.classList.toggle("open");
+
+    const expanded = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", !expanded);
+  });
+}
+
 
 // ===================== THANK YOU PAGE (opcional) =====================
 function getParam(name) {
