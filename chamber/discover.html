@@ -89,24 +89,21 @@
         <!-- ================= PLACES OF INTEREST ================= -->
         <section class="discover-grid" id="discover-grid">
             <h2>Places of Interest</h2>
-            <!-- Cards will be injected here by discover.js -->
+            <!-- Cards will be injected by discover.js -->
         </section>
 
-        <h1>📅 Date Math (Days Between Dates)</h1>
-        <p>See the ⚙️<a href="https://codepen.io/blazzard-jason/pen/ExeBjab" target="_blank">Date.now() TimeStamp</a>
-            &nbsp; pen for Date.now() information.</p>
-        <hr>
+        <!-- ================= VISITOR MESSAGE & DATE MATH ================= -->
+        <section class="visit-info">
+            <h2>Visitor Info & Date Math</h2>
+            <p id="visit-message"></p>
+            <p><span class="label">Date.now(): </span> <span id="today"></span> &nbsp;<span
+                    class="smaller">(milliseconds)</span></p>
+            <p><span class="label">Next Christmas: </span> <span id="christmas"></span> &nbsp; <span
+                    class="smaller">(milliseconds)</span></p>
+            <p><span class="label">🎄Christmas - Date: </span> <span id="christmasDate"></span></p>
+            <p><span class="label">Days until Christmas: </span> <span id="daysleft"></span></p>
+        </section>
 
-        <!-- Visitor message -->
-        <p id="visit-message" style="color: darkgreen; font-weight: bold;"></p>
-
-        <p><span class="label">Date.now(): </span> <span id="today"></span> &nbsp;<span
-                class="smaller">(milliseconds)</span></p>
-        <p><span class="label">Next Christmas: </span> <span id="christmas"></span> &nbsp; <span
-                class="smaller">(milliseconds)</span></p>
-        <p><span class="label">🎄Christmas - Date: </span> <span id="christmasDate"></span></p>
-        <hr>
-        <p><span class="label">Days until Christmas: </span> <span id="daysleft"></span></p>
     </main>
 
     <!-- ================= FOOTER ================= -->
@@ -117,16 +114,25 @@
                 <h2>Lima Chamber of Commerce</h2>
                 <p>Av. Ficticia 123, Office 456</p>
                 <p>Lima, Perú</p>
-                <p>Email:
-                    <a href="mailto:info@limachamber.org">info@limachamber.org</a>
+                <p>
+                    Email:
+                    <a href="mailto:info@limachamber.org">
+                        info@limachamber.org
+                    </a>
                 </p>
                 <p>Phone: +51 1 555-1234</p>
             </div>
 
             <div class="footer-social">
-                <a href="#"><img src="images/youtube.jpg" alt="YouTube Profile" width="32" height="32"></a>
-                <a href="#"><img src="images/twitterx-icon.jpg" alt="Twitter Profile" width="32" height="32"></a>
-                <a href="#"><img src="images/linkedin.jpg" alt="LinkedIn Profile" width="32" height="32"></a>
+                <a href="#">
+                    <img src="images/youtube.jpg" alt="YouTube Profile" loading="lazy" width="32" height="32">
+                </a>
+                <a href="#">
+                    <img src="images/twitterx-icon.jpg" alt="Twitter Profile" loading="lazy" width="32" height="32">
+                </a>
+                <a href="#">
+                    <img src="images/linkedin.jpg" alt="LinkedIn Profile" loading="lazy" width="32" height="32">
+                </a>
             </div>
 
             <div class="footer-dev-info">

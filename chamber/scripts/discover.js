@@ -2,6 +2,7 @@ import { places } from "../data/discover.mjs";
 
 const cardsContainer = document.querySelector("#discover-grid");
 
+// ---------- Generate cards ----------
 places.forEach(place => {
     const card = document.createElement("article");
     card.classList.add("discover-card");
@@ -31,6 +32,7 @@ places.forEach(place => {
     // Button
     const button = document.createElement("button");
     button.textContent = "Learn more";
+    button.setAttribute("aria-label", `Learn more about ${place.name}`);
 
     // Append all elements to card
     card.append(figure, title, address, description, button);
@@ -39,33 +41,16 @@ places.forEach(place => {
     cardsContainer.appendChild(card);
 });
 
-// milliseconds to days constant
+// ---------- Visitor message with localStorage ----------
 const msToDays = 86400000;
-
-// today's date
-const theDateToday = new Date();
-
-// initialize display elements
-const todayElement = document.querySelector("#today");
-const christmasElement = document.querySelector("#christmas");
-const christmasDateElement = document.querySelector("#christmasDate");
-const daysElement = document.querySelector("#daysleft");
-const visitMessageElement = document.querySelector("#visit-message");
-
-// -------------------------
-// LocalStorage - last visit
-// -------------------------
 const now = Date.now();
 const lastVisit = localStorage.getItem("lastVisit");
 let visitMessage = "";
 
-// first visit
 if (!lastVisit) {
     visitMessage = "Welcome! Let us know if you have any questions.";
 } else {
-    const diffMs = now - parseInt(lastVisit);
-    const diffDays = Math.floor(diffMs / msToDays);
-
+    const diffDays = Math.floor((now - parseInt(lastVisit)) / msToDays);
     if (diffDays < 1) {
         visitMessage = "Back so soon! Awesome!";
     } else if (diffDays === 1) {
@@ -75,26 +60,24 @@ if (!lastVisit) {
     }
 }
 
-// display message
-visitMessageElement.textContent = visitMessage;
-
-// store current visit
+document.querySelector("#visit-message").textContent = visitMessage;
 localStorage.setItem("lastVisit", now);
 
-// -------------------------
-// Christmas date math
-// -------------------------
-const today = Date.now();
+// ---------- Days until Christmas ----------
+const theDateToday = new Date();
+const todayElement = document.querySelector("#today");
+const christmasElement = document.querySelector("#christmas");
+const christmasDateElement = document.querySelector("#christmasDate");
+const daysElement = document.querySelector("#daysleft");
+
 const christmasDate = new Date(Date.UTC(theDateToday.getFullYear(), 11, 25));
-// if past Dec 25, use next year
-if (theDateToday.getMonth() == 11 && theDateToday.getDate() > 25) {
+if (theDateToday.getMonth() === 11 && theDateToday.getDate() > 25) {
     christmasDate.setFullYear(christmasDate.getFullYear() + 1);
 }
 
 const daysleft = (christmasDate.getTime() - Date.now()) / msToDays;
 
-// display Christmas info
-todayElement.textContent = today;
+todayElement.textContent = Date.now();
 christmasElement.textContent = christmasDate.getTime();
 christmasDateElement.textContent = christmasDate;
 daysElement.textContent = `${daysleft.toFixed(0)} days`;
