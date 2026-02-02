@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daniel Vilchez">
+    <meta name="description"
+        content="Discover Lima - Demographics, highlights, and information for visitors and future chamber members.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Lima | Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    </noscript>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Logo of Lima Chamber of Commerce" class="logo" width="64" height="64">
+                <p class="site-title-name">Lima Chamber of Commerce</p>
+            </a>
+
+            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"></button>
+            <button id="menu-toggle" class="menu-button" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        </div>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <div class="hero">
+            <h1>Discover Lima</h1>
+            <p>Learn more about our city, its people, and what makes Lima a great place to live and do business.</p>
+        </div>
+
+        <section class="discover-info">
+            <h2>About the Area</h2>
+            <p>
+                Lima is the capital city of Peru and one of the most important economic and cultural
+                centers in South America. It offers a mix of historical heritage, modern infrastructure,
+                and diverse business opportunities.
+            </p>
+        </section>
+
+        <section class="discover-info">
+            <h2>Quick Facts</h2>
+            <ul>
+                <li>Population: Over 10 million residents</li>
+                <li>Region: Central Coast of Peru</li>
+                <li>Main Industries: Commerce, tourism, technology, manufacturing</li>
+            </ul>
+        </section>
+
+        <!-- ================= PLACES OF INTEREST ================= -->
+        <section class="discover-grid" id="discover-grid">
+            <h2>Places of Interest</h2>
+            <!-- Cards will be injected here by discover.js -->
+        </section>
+
+        <h1>📅 Date Math (Days Between Dates)</h1>
+        <p>See the ⚙️<a href="https://codepen.io/blazzard-jason/pen/ExeBjab" target="_blank">Date.now() TimeStamp</a>
+            &nbsp; pen for Date.now() information.</p>
+        <hr>
+
+        <!-- Visitor message -->
+        <p id="visit-message" style="color: darkgreen; font-weight: bold;"></p>
+
+        <p><span class="label">Date.now(): </span> <span id="today"></span> &nbsp;<span
+                class="smaller">(milliseconds)</span></p>
+        <p><span class="label">Next Christmas: </span> <span id="christmas"></span> &nbsp; <span
+                class="smaller">(milliseconds)</span></p>
+        <p><span class="label">🎄Christmas - Date: </span> <span id="christmasDate"></span></p>
+        <hr>
+        <p><span class="label">Days until Christmas: </span> <span id="daysleft"></span></p>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-grid">
+
+            <div class="footer-info">
+                <h2>Lima Chamber of Commerce</h2>
+                <p>Av. Ficticia 123, Office 456</p>
+                <p>Lima, Perú</p>
+                <p>Email:
+                    <a href="mailto:info@limachamber.org">info@limachamber.org</a>
+                </p>
+                <p>Phone: +51 1 555-1234</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><img src="images/youtube.jpg" alt="YouTube Profile" width="32" height="32"></a>
+                <a href="#"><img src="images/twitterx-icon.jpg" alt="Twitter Profile" width="32" height="32"></a>
+                <a href="#"><img src="images/linkedin.jpg" alt="LinkedIn Profile" width="32" height="32"></a>
+            </div>
+
+            <div class="footer-dev-info">
+                <p>&copy; <span id="currentyear"></span> Lima Chamber of Commerce</p>
+                <p>Daniel Vilchez | WDD 231 Class Project</p>
+                <p>Last Modified: <span id="lastmodified"></span></p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

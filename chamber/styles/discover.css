@@ -1,0 +1,188 @@
+/* ===============================
+   MAIN LAYOUT
+=============================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ===============================
+   HERO
+=============================== */
+.hero {
+    background-image:
+        linear-gradient(rgba(13, 27, 42, 0.65), rgba(13, 27, 42, 0.65)),
+        url("../images/discover/lima-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+    text-align: center;
+
+    padding: 4rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* ===============================
+   INFO SECTIONS (ABOUT + FACTS)
+=============================== */
+main section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+main section h2 {
+    margin-bottom: 0.75rem;
+    color: #003366;
+}
+
+main section p {
+    line-height: 1.6;
+}
+
+main section ul {
+    padding-left: 1.3rem;
+}
+
+main section li {
+    margin-bottom: 0.5rem;
+}
+
+/* ===============================
+   DISCOVER GRID (MOBILE FIRST)
+=============================== */
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    /* MOBILE (320px - 640px) */
+    grid-template-areas:
+        "title"
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.discover-grid>h2 {
+    grid-area: title;
+}
+
+/* ===============================
+   DISCOVER CARDS
+=============================== */
+.discover-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Card title */
+.discover-card h2 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.3rem;
+    color: #003366;
+}
+
+.discover-card .address {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+/* Grid areas */
+.discover-card:nth-of-type(1) {
+    grid-area: card1;
+}
+
+.discover-card:nth-of-type(2) {
+    grid-area: card2;
+}
+
+.discover-card:nth-of-type(3) {
+    grid-area: card3;
+}
+
+.discover-card:nth-of-type(4) {
+    grid-area: card4;
+}
+
+.discover-card:nth-of-type(5) {
+    grid-area: card5;
+}
+
+.discover-card:nth-of-type(6) {
+    grid-area: card6;
+}
+
+.discover-card:nth-of-type(7) {
+    grid-area: card7;
+}
+
+.discover-card:nth-of-type(8) {
+    grid-area: card8;
+}
+
+/* ===============================
+   MEDIUM SCREENS (641px - 1024px)
+=============================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+}
+
+/* ===============================
+   LARGE SCREENS (1025px y más)
+=============================== */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "title title title title"
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
