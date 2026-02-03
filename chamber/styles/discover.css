@@ -17,7 +17,11 @@ main {
     overflow: hidden;
     color: #ffffff;
     text-align: center;
+
+    background-color: #0d1b2a;
+    /* ← ESTA línea arregla el audit */
 }
+
 
 /* Hero image */
 .hero img {
