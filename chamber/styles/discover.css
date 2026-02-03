@@ -141,7 +141,8 @@ main section li {
    VISIT MESSAGE
 =============================== */
 #visit-message {
-    color: darkgreen;
+    color: #006400;
+    /* antes: darkgreen */
     font-weight: bold;
 }
 
