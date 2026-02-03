@@ -16,10 +16,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     </noscript>
 
     <!-- CSS -->
@@ -28,9 +31,8 @@
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/discover.css">
 
-    <!-- JavaScript -->
+    <!-- JS que SÍ puede ir en head -->
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/discover.js" type="module"></script>
 </head>
 
 <body>
@@ -62,16 +64,14 @@
     <!-- ================= MAIN ================= -->
     <main>
 
-        <!-- HERO -->
         <section class="hero">
-            <img src="images/hero-lima.webp" alt="City of Lima skyline" width="1200" height="420" fetchpriority="high"
-                loading="eager">
+            <img src="images/hero-lima.webp" alt="City of Lima skyline"
+                width="1200" height="420"
+                fetchpriority="high" loading="eager">
 
             <div class="hero-text">
                 <h1>Discover Lima</h1>
-                <p>
-                    Explore the cultural richness, history, and vibrant life of Peru’s capital city.
-                </p>
+                <p>Explore the cultural richness, history, and vibrant life of Peru’s capital city.</p>
             </div>
         </section>
 
@@ -79,8 +79,7 @@
             <h2>About the Area</h2>
             <p>
                 Lima is the capital city of Peru and one of the most important economic and cultural
-                centers in South America. It offers a mix of historical heritage, modern infrastructure,
-                and diverse business opportunities.
+                centers in South America.
             </p>
         </section>
 
@@ -93,13 +92,10 @@
             </ul>
         </section>
 
-        <!-- PLACES OF INTEREST -->
         <section class="discover-grid" id="discover-grid">
             <h2>Places of Interest</h2>
-            <!-- Cards injected by discover.js -->
         </section>
 
-        <!-- VISITOR INFO -->
         <section class="visit-info">
             <h2>Visitor Info & Date Math</h2>
             <p id="visit-message"></p>
@@ -138,6 +134,8 @@
         </div>
     </footer>
 
-</body>
+    <!-- JS que NO debe bloquear el render -->
+    <script src="scripts/discover.js" type="module"></script>
 
+</body>
 </html>
