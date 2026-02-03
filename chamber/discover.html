@@ -62,10 +62,18 @@
     <!-- ================= MAIN ================= -->
     <main>
 
-        <div class="hero">
-            <h1>Discover Lima</h1>
-            <p>Learn more about our city, its people, and what makes Lima a great place to live and do business.</p>
-        </div>
+        <!-- HERO -->
+        <section class="hero">
+            <img src="images/hero-lima.webp" alt="City of Lima skyline" width="1200" height="420" fetchpriority="high"
+                loading="eager">
+
+            <div class="hero-text">
+                <h1>Discover Lima</h1>
+                <p>
+                    Explore the cultural richness, history, and vibrant life of Peru’s capital city.
+                </p>
+            </div>
+        </section>
 
         <section class="discover-info">
             <h2>About the Area</h2>
@@ -85,21 +93,19 @@
             </ul>
         </section>
 
-        <!-- ================= PLACES OF INTEREST ================= -->
+        <!-- PLACES OF INTEREST -->
         <section class="discover-grid" id="discover-grid">
             <h2>Places of Interest</h2>
-            <!-- Cards will be injected by discover.js -->
+            <!-- Cards injected by discover.js -->
         </section>
 
-        <!-- ================= VISITOR MESSAGE & DATE MATH ================= -->
+        <!-- VISITOR INFO -->
         <section class="visit-info">
             <h2>Visitor Info & Date Math</h2>
             <p id="visit-message"></p>
-            <p><span class="label">Date.now(): </span> <span id="today"></span> &nbsp;<span
-                    class="smaller">(milliseconds)</span></p>
-            <p><span class="label">Next Christmas: </span> <span id="christmas"></span> &nbsp; <span
-                    class="smaller">(milliseconds)</span></p>
-            <p><span class="label">🎄Christmas - Date: </span> <span id="christmasDate"></span></p>
+            <p><span class="label">Date.now(): </span> <span id="today"></span></p>
+            <p><span class="label">Next Christmas: </span> <span id="christmas"></span></p>
+            <p><span class="label">🎄 Christmas Date: </span> <span id="christmasDate"></span></p>
             <p><span class="label">Days until Christmas: </span> <span id="daysleft"></span></p>
         </section>
 
@@ -113,25 +119,14 @@
                 <h2>Lima Chamber of Commerce</h2>
                 <p>Av. Ficticia 123, Office 456</p>
                 <p>Lima, Perú</p>
-                <p>
-                    Email:
-                    <a href="mailto:info@limachamber.org">
-                        info@limachamber.org
-                    </a>
-                </p>
+                <p>Email: <a href="mailto:info@limachamber.org">info@limachamber.org</a></p>
                 <p>Phone: +51 1 555-1234</p>
             </div>
 
             <div class="footer-social">
-                <a href="#">
-                    <img src="images/youtube.jpg" alt="YouTube Profile" loading="lazy" width="32" height="32">
-                </a>
-                <a href="#">
-                    <img src="images/twitterx-icon.jpg" alt="Twitter Profile" loading="lazy" width="32" height="32">
-                </a>
-                <a href="#">
-                    <img src="images/linkedin.jpg" alt="LinkedIn Profile" loading="lazy" width="32" height="32">
-                </a>
+                <a href="#"><img src="images/youtube.jpg" alt="YouTube" width="32" height="32"></a>
+                <a href="#"><img src="images/twitterx-icon.jpg" alt="Twitter" width="32" height="32"></a>
+                <a href="#"><img src="images/linkedin.jpg" alt="LinkedIn" width="32" height="32"></a>
             </div>
 
             <div class="footer-dev-info">

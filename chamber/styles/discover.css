@@ -12,33 +12,59 @@ main {
    HERO
 =============================== */
 .hero {
-    background-image:
-        linear-gradient(rgba(13, 27, 42, 0.65), rgba(13, 27, 42, 0.65)),
-        url("../images/hero-lima.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
     color: #ffffff;
     text-align: center;
+}
+
+/* Hero image */
+.hero img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark overlay (equivale al linear-gradient antiguo) */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 27, 42, 0.65);
+    z-index: 1;
+}
+
+/* Text container */
+.hero-text {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     padding: 4rem 1.5rem;
-    margin-bottom: 2.5rem;
 }
 
 .hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.3rem;
+    margin-bottom: 0.75rem;
 }
 
 .hero p {
     max-width: 650px;
-    margin: 0 auto;
     font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* ===============================
    INFO SECTIONS
 =============================== */
-main section {
+main section:not(.hero) {
     background-color: #ffffff;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -96,10 +122,8 @@ main section li {
 
 .discover-card img {
     width: 100%;
-    height: auto;
     border-radius: 6px;
     transition: all 0.3s ease;
-    /* smooth hover effect */
 }
 
 .discover-card h2 {
@@ -111,40 +135,6 @@ main section li {
 .discover-card address {
     font-size: 0.9rem;
     font-style: italic;
-    margin-bottom: 0.5rem;
-}
-
-/* Grid areas for cards */
-.discover-card:nth-of-type(1) {
-    grid-area: card1;
-}
-
-.discover-card:nth-of-type(2) {
-    grid-area: card2;
-}
-
-.discover-card:nth-of-type(3) {
-    grid-area: card3;
-}
-
-.discover-card:nth-of-type(4) {
-    grid-area: card4;
-}
-
-.discover-card:nth-of-type(5) {
-    grid-area: card5;
-}
-
-.discover-card:nth-of-type(6) {
-    grid-area: card6;
-}
-
-.discover-card:nth-of-type(7) {
-    grid-area: card7;
-}
-
-.discover-card:nth-of-type(8) {
-    grid-area: card8;
 }
 
 /* ===============================
@@ -153,15 +143,12 @@ main section li {
 #visit-message {
     color: darkgreen;
     font-weight: bold;
-    margin-bottom: 1rem;
 }
 
 /* ===============================
    MEDIA QUERIES
 =============================== */
 @media (min-width: 641px) {
-
-    /* Medium screens: 2 columns */
     .discover-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -176,22 +163,15 @@ main section li {
         font-size: 2.6rem;
     }
 
-    /* ===============================
-       IMAGE HOVER EFFECTS (desktop only)
-    ================================ */
     .discover-card img:hover {
-        transform: scale(1.05) rotate(1deg);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
         filter: brightness(1.1);
-        cursor: pointer;
     }
 }
 
 @media (min-width: 1025px) {
-
-    /* Large screens: 4 columns */
     .discover-grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
             "title title title title"
             "card1 card2 card3 card4"
