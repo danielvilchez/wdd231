@@ -105,39 +105,22 @@ function applyFiltersAndView() {
 }
 
 // ===============================
-// Event Listeners (safe checks)
+// Event Listeners
 // ===============================
+gridButton.addEventListener("click", () => {
+    currentView = "grid";
+    applyFiltersAndView();
+});
 
-// Only add event listeners if the elements exist
-if (gridButton) {
-    gridButton.addEventListener("click", () => {
-        currentView = "grid";
-        applyFiltersAndView();
-    });
-}
+listButton.addEventListener("click", () => {
+    currentView = "list";
+    applyFiltersAndView();
+});
 
-if (listButton) {
-    listButton.addEventListener("click", () => {
-        currentView = "list";
-        applyFiltersAndView();
-    });
-}
-
-if (filterSelect) {
-    filterSelect.addEventListener("change", () => {
-        currentFilter = filterSelect.value;
-        applyFiltersAndView();
-    });
-}
-
-// Mobile navigation toggle (menu button)
-if (menuButton && mainNav) {
-    menuButton.addEventListener("click", () => {
-        const isOpen = mainNav.classList.toggle("open");
-        menuButton.setAttribute("aria-expanded", isOpen);
-    });
-}
-
+filterSelect.addEventListener("change", () => {
+    currentFilter = filterSelect.value;
+    applyFiltersAndView();
+});
 
 // ===============================
 // Footer Info
