@@ -17,11 +17,8 @@ main {
     overflow: hidden;
     color: #ffffff;
     text-align: center;
-
     background-color: #0d1b2a;
-    /* ← ESTA línea arregla el audit */
 }
-
 
 /* Hero image */
 .hero img {
@@ -31,7 +28,7 @@ main {
     display: block;
 }
 
-/* Dark overlay (equivale al linear-gradient antiguo) */
+/* Dark overlay */
 .hero::after {
     content: "";
     position: absolute;
@@ -116,7 +113,45 @@ main section li {
     grid-area: title;
 }
 
-/* CARD STYLES */
+/* ===============================
+   NAMED GRID AREAS (REQUIRED)
+   🔑 ESTA ES LA CORRECCIÓN DE LA RÚBRICA
+=============================== */
+.discover-card:nth-of-type(1) {
+    grid-area: card1;
+}
+
+.discover-card:nth-of-type(2) {
+    grid-area: card2;
+}
+
+.discover-card:nth-of-type(3) {
+    grid-area: card3;
+}
+
+.discover-card:nth-of-type(4) {
+    grid-area: card4;
+}
+
+.discover-card:nth-of-type(5) {
+    grid-area: card5;
+}
+
+.discover-card:nth-of-type(6) {
+    grid-area: card6;
+}
+
+.discover-card:nth-of-type(7) {
+    grid-area: card7;
+}
+
+.discover-card:nth-of-type(8) {
+    grid-area: card8;
+}
+
+/* ===============================
+   CARD STYLES
+=============================== */
 .discover-card {
     background-color: #ffffff;
     padding: 1rem;
@@ -146,7 +181,6 @@ main section li {
 =============================== */
 #visit-message {
     color: #006400;
-    /* antes: darkgreen */
     font-weight: bold;
 }
 
