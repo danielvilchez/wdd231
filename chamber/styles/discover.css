@@ -90,7 +90,7 @@ main section li {
 
 /* ===============================
    DISCOVER GRID – BASE (MOBILE FIRST)
-   📱 Mobile layout with named grid areas
+   Mobile layout with named grid areas
 =============================== */
 .discover-grid {
     display: grid;
@@ -186,7 +186,7 @@ main section li {
 
 /* ===============================
    MEDIA QUERY – TABLET
-   📲 Redefined named grid areas
+   Redefined named grid areas
 =============================== */
 @media only screen and (min-width: 641px) {
     .discover-grid {
@@ -211,7 +211,7 @@ main section li {
 
 /* ===============================
    MEDIA QUERY – DESKTOP
-   🖥️ Redefined named grid areas again
+   Redefined named grid areas again
 =============================== */
 @media only screen and (min-width: 1025px) {
     .discover-grid {
