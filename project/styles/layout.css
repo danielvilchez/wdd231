@@ -138,22 +138,20 @@
 ================================ */
 .hero {
     position: relative;
-    background-image: url('../images/hero.webp');
-    /* ruta de tu imagen */
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-    /* altura deseada */
-    display: flex;
-    align-items: center;
-    /* centra verticalmente */
-    justify-content: center;
-    /* centra horizontalmente */
-    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
     border-radius: 8px;
-    color: #ffffff;
-    /* color del texto */
-    margin-bottom: 2rem;
+    overflow: hidden;
+    /* recorta la imagen y capa oscura */
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
 .hero::before {
@@ -161,13 +159,15 @@
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    /* capa oscura para contraste */
     border-radius: 8px;
 }
 
 .hero-content {
-    position: relative;
-    /* sobre la capa oscura */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
     max-width: 800px;
     padding: 0 1rem;
 }
