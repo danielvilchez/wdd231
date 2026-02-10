@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Explorer | Suggest a Movie</title>
+    <meta name="description" content="Suggest a new movie to be added to the Movie Explorer website.">
+    <meta name="author" content="Daniel Vilchez">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Suggest a Movie">
+    <meta property="og:description" content="Submit a movie suggestion to Movie Explorer.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body class="suggest">
+    <header>
+        <nav>
+            <button id="menu-button" aria-label="Open navigation menu">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="suggest.html" class="active">Suggest a Movie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Suggest a Movie</h1>
+        <p>Use the form below to suggest a movie you would like to see added.</p>
+
+        <form method="get" action="thanks.html">
+            <label for="title">Movie Title</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="year">Release Year</label>
+            <input type="number" id="year" name="year" required>
+
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" name="genre" required>
+
+            <label for="message">Why should we add this movie?</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit Suggestion</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Daniel Vilchez | WDD231</p>
+        <p><a href="#">Video Demonstration</a></p>
+    </footer>
+
+    <!-- JS -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>

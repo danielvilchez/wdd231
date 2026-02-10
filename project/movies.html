@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Explorer | Movies</title>
+    <meta name="description" content="Browse a collection of popular movies with detailed information and ratings.">
+    <meta name="author" content="Daniel Vilchez">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Movie Explorer Movies">
+    <meta property="og:description" content="Browse popular movies and explore details.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body class="movies">
+    <header>
+        <nav>
+            <button id="menu-button" aria-label="Open navigation menu">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html" class="active">Movies</a></li>
+                <li><a href="suggest.html">Suggest a Movie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="movies-intro">
+            <h1>Movies Collection</h1>
+            <p>
+                Discover a curated selection of popular movies.
+                Click on any movie to explore more details.
+            </p>
+        </section>
+
+        <section id="movies-container">
+            <!-- Movies dynamically generated here -->
+        </section>
+
+        <div class="movies-footer-text">
+            <p>More movies coming soon 🎬</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Daniel Vilchez | WDD231</p>
+        <p><a href="#">Video Demonstration</a></p>
+
+        
+    </footer>
+
+    <!-- Modal -->
+    <div id="movie-modal" class="modal" hidden>
+        <div class="modal-content">
+            <button id="close-modal" aria-label="Close modal">✖</button>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/movies.js"></script>
+    <script type="module" src="scripts/weather.js"></script>
+</body>
+
+</html>

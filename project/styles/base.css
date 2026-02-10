@@ -1,0 +1,85 @@
+/* ===============================
+   Base Reset
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   Base Styles
+================================ */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+header {
+    background-color: #0d1b2a;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===============================
+   Navigation Menu
+================================ */
+nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #0d1b2a;
+    margin-top: 1rem;
+
+    /* CENTRADO */
+    width: 100%;
+    align-items: center;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===============================
+   Layout
+================================ */
+main {
+    padding: 1.5rem;
+}
+
+footer {
+    background-color: #0d1b2a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}

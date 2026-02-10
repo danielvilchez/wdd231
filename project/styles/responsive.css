@@ -1,0 +1,26 @@
+/* ===============================
+   MEDIA QUERIES (Responsive)
+================================ */
+@media (max-width: 768px) {
+
+    #movies-container,
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    #movies-container,
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+
+    #movies-container,
+    .featured-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

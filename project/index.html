@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Explorer | Home</title>
+    <meta name="description"
+        content="Movie Explorer is a website where users can discover popular movies and explore detailed information.">
+    <meta name="author" content="Daniel Vilchez">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Movie Explorer">
+    <meta property="og:description" content="Discover popular movies and explore detailed information.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button id="menu-button" aria-label="Open navigation menu">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="suggest.html">Suggest a Movie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Movie Explorer</h1>
+                <p>Discover popular movies, explore details, and find your next favorite film.</p>
+                <a href="movies.html" class="cta-button">Browse Movies</a>
+            </div>
+        </section>
+
+        <!-- INFO / PURPOSE -->
+        <section class="info-section">
+            <h2>What is Movie Explorer?</h2>
+            <p>
+                Movie Explorer is a simple platform where users can browse popular movies,
+                view ratings, genres, and read short summaries before deciding what to watch.
+            </p>
+        </section>
+
+        <!-- FEATURED MOVIES -->
+        <section>
+            <h2>Featured Movies</h2>
+            <div id="featured-movies" class="featured-grid">
+                <!-- Loaded with JavaScript -->
+            </div>
+            <div class="center">
+                <a href="movies.html" class="secondary-button">View All Movies</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2026 | Daniel Vilchez | WDD231</p>
+                <p><a href="#">Video Demonstration</a></p>
+            </div>
+
+            <div class="footer-weather">
+                <h3>Weather in Lima</h3>
+                <p id="current-weather">Loading weather...</p>
+                <ul id="forecast"></ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/featured.js"></script>
+    <script type="module" src="scripts/weather.js"></script>
+</body>
+
+</html>

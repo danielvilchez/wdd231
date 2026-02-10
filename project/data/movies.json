@@ -1,0 +1,116 @@
+{
+    "movies": [
+        {
+            "title": "The Godfather",
+            "year": 1972,
+            "genre": "Crime",
+            "rating": 9.2,
+            "image": "images/godfather.webp",
+            "description": "The story of the Corleone family, an organized crime dynasty led by patriarch Vito Corleone."
+        },
+        {
+            "title": "The Dark Knight",
+            "year": 2008,
+            "genre": "Action",
+            "rating": 9.0,
+            "image": "images/dark-knight.webp",
+            "description": "Batman faces the Joker, a criminal mastermind who plunges Gotham City into chaos."
+        },
+        {
+            "title": "Titanic",
+            "year": 1997,
+            "genre": "Romance",
+            "rating": 7.9,
+            "image": "images/titanic.webp",
+            "description": "A young couple from different social classes fall in love aboard the ill-fated RMS Titanic."
+        },
+        {
+            "title": "Forrest Gump",
+            "year": 1994,
+            "genre": "Drama",
+            "rating": 8.8,
+            "image": "images/forrest-gump.webp",
+            "description": "The life journey of Forrest Gump, a man with a low IQ but a big heart."
+        },
+        {
+            "title": "Inception",
+            "year": 2010,
+            "genre": "Sci-Fi",
+            "rating": 8.8,
+            "image": "images/inception.webp",
+            "description": "A skilled thief steals secrets by entering people's dreams."
+        },
+        {
+            "title": "The Matrix",
+            "year": 1999,
+            "genre": "Sci-Fi",
+            "rating": 8.7,
+            "image": "images/matrix.webp",
+            "description": "A hacker discovers the reality he lives in is a simulated world controlled by machines."
+        },
+        {
+            "title": "The Lion King",
+            "year": 1994,
+            "genre": "Animation",
+            "rating": 8.5,
+            "image": "images/lion-king.webp",
+            "description": "A young lion prince flees his kingdom after the death of his father."
+        },
+        {
+            "title": "Gladiator",
+            "year": 2000,
+            "genre": "Drama",
+            "rating": 8.5,
+            "image": "images/gladiator.webp",
+            "description": "A former Roman general seeks revenge against the corrupt emperor who murdered his family."
+        },
+        {
+            "title": "Interstellar",
+            "year": 2014,
+            "genre": "Sci-Fi",
+            "rating": 8.6,
+            "image": "images/interstellar.webp",
+            "description": "A team of explorers travel through a wormhole in space to save humanity."
+        },
+        {
+            "title": "Avengers: Endgame",
+            "year": 2019,
+            "genre": "Action",
+            "rating": 8.4,
+            "image": "images/avengers-endgame.webp",
+            "description": "The Avengers assemble one last time to reverse the damage caused by Thanos."
+        },
+        {
+            "title": "Joker",
+            "year": 2019,
+            "genre": "Drama",
+            "rating": 8.4,
+            "image": "images/joker.webp",
+            "description": "The origin story of the iconic villain Joker and his descent into madness."
+        },
+        {
+            "title": "Fight Club",
+            "year": 1999,
+            "genre": "Drama",
+            "rating": 8.8,
+            "image": "images/fight-club.webp",
+            "description": "An insomniac office worker forms an underground fight club."
+        },
+        {
+            "title": "Avatar",
+            "year": 2009,
+            "genre": "Fantasy",
+            "rating": 7.8,
+            "image": "images/avatar.webp",
+            "description": "A paraplegic marine is sent to the moon Pandora and becomes torn between two worlds."
+        },
+        {
+            "title": "Whiplash",
+            "year": 2014,
+            "genre": "Drama",
+            "rating": 8.5,
+            "image": "images/whiplash.webp",
+            "description": "A young drummer pushes himself to the limit under a ruthless music instructor."
+        }
+    ]
+}
