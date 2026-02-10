@@ -111,6 +111,22 @@
             "rating": 8.5,
             "image": "images/whiplash.webp",
             "description": "A young drummer pushes himself to the limit under a ruthless music instructor."
+        },
+        {
+            "title": "Inside Out 2",
+            "year": 2024,
+            "genre": "Animation",
+            "rating": 7.5,
+            "image": "images/inside-out-2.webp",
+            "description": "A sequel to the animated film Inside Out, following the emotional journey of Riley's emotions."
+        },
+        {
+            "title": "Deadpool & Wolverine",
+            "year": 2024,
+            "genre": "Action",
+            "rating": 7.8,
+            "image": "images/deadpool-wolverine.webp",
+            "description": "A comedic action film featuring Deadpool and Wolverine in a story about their unlikely partnership."
         }
     ]
 }
