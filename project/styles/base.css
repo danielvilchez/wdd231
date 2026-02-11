@@ -124,3 +124,12 @@ footer a:focus {
     outline: 2px solid #e63946;
     outline-offset: 2px;
 }
+
+/* ===============================
+   Fix contrast for links on dark backgrounds
+================================ */
+header a,
+footer a {
+    color: #ffffff;
+    /* asegura contraste suficiente sobre #0d1b2a */
+}
