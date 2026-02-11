@@ -21,14 +21,17 @@ async function getMovies() {
 }
 
 function displayMovies(movies) {
-    moviesContainer.innerHTML = '';
+    // Clear container except pre-rendered LCP movie
+    moviesContainer.querySelectorAll('.movie-card:not(:first-child)').forEach(el => el.remove());
 
-    movies.forEach(movie => {
-        const movieCard = document.createElement('div');
+    movies.forEach((movie, index) => {
+        if (index === 0) return; // skip The Godfather, pre-rendered
+
+        const movieCard = document.createElement('article');
         movieCard.classList.add('movie-card');
 
         movieCard.innerHTML = `
-            <img src="${movie.image}" alt="${movie.title} poster" loading="lazy">
+            <img src="${movie.image}" alt="${movie.title} poster" loading="lazy" width="300" height="450">
             <h2>${movie.title}</h2>
             <p><strong>Year:</strong> ${movie.year}</p>
             <p><strong>Genre:</strong> ${movie.genre}</p>
@@ -42,14 +45,13 @@ function displayMovies(movies) {
 
 function openModal(movie) {
     modalDetails.innerHTML = `
-        <img src="${movie.image}" alt="${movie.title} poster" loading="lazy">
+        <img src="${movie.image}" alt="${movie.title} poster" loading="lazy" width="300" height="450">
         <h2>${movie.title}</h2>
         <p><strong>Release Year:</strong> ${movie.year}</p>
         <p><strong>Genre:</strong> ${movie.genre}</p>
         <p><strong>Rating:</strong> ${movie.rating}</p>
         <p><strong>Summary:</strong> ${movie.description}</p>
     `;
-
     modal.hidden = false;
 }
 
