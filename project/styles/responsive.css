@@ -8,6 +8,37 @@
         grid-template-columns: 1fr;
         /* una debajo de otra en móvil */
     }
+
+    /* ===============================
+       HERO MOBILE FIX
+    ================================= */
+    .hero-content {
+        max-width: 90%;
+        /* Que no se salga de los bordes */
+        padding: 1rem;
+        /* Espacio interno */
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        /* Mantener centrado */
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        /* Ajusta tamaño del título */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        /* Ajusta tamaño del párrafo */
+        line-height: 1.4;
+        /* Mejor lectura */
+    }
+
+    .hero-content .cta-button {
+        font-size: 0.95rem;
+        /* Botón más compacto */
+        padding: 0.5rem 1rem;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
