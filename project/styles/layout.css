@@ -88,10 +88,14 @@
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
+    /* overlay oscuro */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
+
+    /* Aseguramos contraste si algo hereda color */
+    color: #ffffff;
 }
 
 .modal[hidden] {
@@ -100,12 +104,23 @@
 
 .modal-content {
     background-color: #ffffff;
+    /* fondo claro */
+    color: #222;
+    /* 🔥 texto oscuro para contraste */
     padding: 1.5rem;
     max-width: 500px;
     width: 90%;
     border-radius: 8px;
     position: relative;
     text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    /* mejora visual */
+}
+
+.modal-content h2,
+.modal-content p {
+    color: #222;
+    /* fuerza contraste correcto */
 }
 
 .modal-content img {
@@ -122,8 +137,16 @@
     right: 0.5rem;
     background: none;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    /* contraste sobre blanco */
     cursor: pointer;
+}
+
+#close-modal:hover {
+    color: #e63946;
+    /* feedback visual */
 }
 
 /* ===============================
