@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Movie Explorer | Suggest a Movie</title>
-    <meta name="description" content="Suggest a new movie to be added to the Movie Explorer website.">
+    <meta name="description"
+        content="Suggest a movie to be added to Movie Explorer and help expand our curated collection of popular films.">
     <meta name="author" content="Daniel Vilchez">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Movie Explorer | Suggest a Movie">
+    <meta property="og:description"
+        content="Share your favorite movie and help grow the Movie Explorer collection with new suggestions from users like you.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://danielvilchez.github.io/wdd231/project/images/hero.webp">
+    <meta property="og:url" content="https://danielvilchez.github.io/wdd231/project/suggest.html">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/base.css">
@@ -31,30 +45,42 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="movies.html">Movies</a></li>
                 <li><a href="suggest.html" class="active">Suggest a Movie</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Suggest a Movie</h1>
-        <p>Use the form below to suggest a movie you would like to see added.</p>
 
-        <form id="suggest-form">
-            <label for="title">Movie Title</label>
-            <input type="text" id="title" name="title" required>
+        <!-- HERO -->
+        <section class="hero">
+            <img src="images/hero.webp" alt="Person submitting a movie suggestion through an online form" width="1200"
+                height="600" loading="eager">
+            <div class="hero-content">
+                <h1>Suggest a Movie</h1>
+                <p>Use the form below to suggest a movie you would like to see added.</p>
+            </div>
+        </section>
 
-            <label for="year">Release Year</label>
-            <input type="number" id="year" name="year" required>
+        <!-- FORM SECTION -->
+        <section class="form-section">
+            <form id="suggest-form">
+                <label for="title">Movie Title</label>
+                <input type="text" id="title" name="title" required>
 
-            <label for="genre">Genre</label>
-            <input type="text" id="genre" name="genre" required>
+                <label for="year">Release Year</label>
+                <input type="number" id="year" name="year" required>
 
-            <label for="message">Why should we add this movie?</label>
-            <textarea id="message" name="message" rows="4"></textarea>
+                <label for="genre">Genre</label>
+                <input type="text" id="genre" name="genre" required>
 
-            <button type="submit">Submit Suggestion</button>
-        </form>
+                <label for="message">Why should we add this movie?</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Submit Suggestion</button>
+            </form>
+        </section>
+
     </main>
 
     <footer>
@@ -65,12 +91,13 @@
             </div>
 
             <div class="footer-weather">
-                <h3>Weather in Lima</h3>
+                <h2>Weather in Lima</h2>
                 <p id="current-weather">Loading weather...</p>
                 <ul id="forecast"></ul>
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
