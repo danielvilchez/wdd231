@@ -9,11 +9,6 @@
     <meta name="description" content="Suggest a new movie to be added to the Movie Explorer website.">
     <meta name="author" content="Daniel Vilchez">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Suggest a Movie">
-    <meta property="og:description" content="Submit a movie suggestion to Movie Explorer.">
-    <meta property="og:type" content="website">
-
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
 
@@ -24,6 +19,7 @@
 
     <!-- JS -->
     <script type="module" src="scripts/suggest.js"></script>
+    <script type="module" src="scripts/main.js"></script>
 </head>
 
 <body class="suggest">
@@ -42,7 +38,7 @@
         <h1>Suggest a Movie</h1>
         <p>Use the form below to suggest a movie you would like to see added.</p>
 
-        <form method="post">
+        <form id="suggest-form">
             <label for="title">Movie Title</label>
             <input type="text" id="title" name="title" required>
 

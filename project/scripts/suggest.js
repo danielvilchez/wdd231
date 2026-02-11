@@ -1,10 +1,10 @@
 // scripts/suggest.js
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
+    const form = document.getElementById('suggest-form');
     if (!form) return;
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
 
         const title = document.getElementById('title').value.trim();
         const year = document.getElementById('year').value.trim();
@@ -16,9 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        alert(`Thank you for suggesting "${title}" (${year})!`);
-
-        form.reset(); 
+        // Redirige a form-action.html con los datos en la URL
+        const params = new URLSearchParams({ title, year, genre, message });
+        window.location.href = `form-action.html?${params.toString()}`;
     });
 });
-

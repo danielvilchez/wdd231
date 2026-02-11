@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer | Suggestion Submitted</title>
+    <meta name="description" content="See the movie suggestion you just submitted.">
+    <meta name="author" content="Daniel Vilchez">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/form-action.css"> <!-- estilos para los datos -->
+</head>
+
+<body class="form-action">
+    <header>
+        <nav>
+            <button id="menu-button" aria-label="Open navigation menu">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="suggest.html" class="active">Suggest a Movie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Movie Suggestion Submitted</h1>
+        <p>Thank you for submitting your movie suggestion. Here is what we received:</p>
+        <div id="output"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Daniel Vilchez | WDD231</p>
+        <p><a href="#">Video Demonstration</a></p>
+    </footer>
+
+    <!-- JS -->
+    <script type="module" src="scripts/main.js"></script> <!-- menú -->
+    <script src="scripts/form-action.js"></script> <!-- mostrar datos -->
+</body>
+
+</html>
