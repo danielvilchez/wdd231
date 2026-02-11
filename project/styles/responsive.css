@@ -1,26 +1,29 @@
 /* ===============================
-   MEDIA QUERIES (Responsive)
+   Featured & Movies Grid Responsive
 ================================ */
 @media (max-width: 768px) {
 
     #movies-container,
-    .featured-grid {
+    #featured-movies {
         grid-template-columns: 1fr;
+        /* una debajo de otra en móvil */
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
     #movies-container,
-    .featured-grid {
+    #featured-movies {
         grid-template-columns: repeat(2, 1fr);
+        /* dos columnas en tablet */
     }
 }
 
 @media (min-width: 1025px) {
 
     #movies-container,
-    .featured-grid {
+    #featured-movies {
         grid-template-columns: repeat(4, 1fr);
+        /* desktop */
     }
 }
