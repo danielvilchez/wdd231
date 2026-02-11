@@ -168,7 +168,7 @@
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 8px;
-    z-index: 1;   
+    z-index: 1;
 }
 
 /* Texto */
@@ -180,7 +180,7 @@
     color: #ffffff;
     max-width: 800px;
     padding: 0 1rem;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .hero-content h1 {
@@ -212,7 +212,7 @@
 }
 
 .cta-button {
-    background-color: #e63946;
+    background-color: #9b0410;
     color: #ffffff;
 }
 
@@ -238,7 +238,7 @@
 
 .info-section p {
     font-size: 1rem;
-    color: #555;
+    color: #000000;
     line-height: 1.6;
 }
 
