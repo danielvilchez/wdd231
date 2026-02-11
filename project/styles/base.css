@@ -15,7 +15,6 @@ body {
     line-height: 1.6;
     background-color: #f5f5f5;
     color: #222;
-    /* texto principal sobre fondo claro */
 }
 
 header {
@@ -54,7 +53,7 @@ nav ul li {
 
 nav a {
     color: #ffffff;
-    /* links del nav en blanco sobre fondo oscuro */
+    /* ✅ blanco, igual que antes */
     text-decoration: none;
     font-weight: 600;
 }
@@ -76,17 +75,15 @@ nav a.active {
 ================================ */
 a {
     color: #0d1b2a;
-    /* links normales sobre fondo claro */
     text-decoration: none;
 }
 
 a:visited {
-    color: #0d1b2a;
+    color: #ffffff;
 }
 
 a:hover {
     color: #e63946;
-    /* rojo contraste para hover */
 }
 
 a:focus {
@@ -99,6 +96,16 @@ a:focus {
 ================================ */
 main {
     padding: 1.5rem;
+}
+
+/* ===============================
+   Hero content contrast fix
+================================ */
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* ✅ fondo semitransparente solo para hero */
+    border-radius: 6px;
+    padding: 1rem;
 }
 
 /* ===============================
