@@ -77,7 +77,7 @@
 .movies-footer-text {
     text-align: center;
     margin-top: 2rem;
-    color: #666;
+    color: #000000;
     font-style: italic;
 }
 
@@ -88,13 +88,10 @@
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
-    /* overlay oscuro */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-
-    /* Aseguramos contraste si algo hereda color */
     color: #ffffff;
 }
 
@@ -104,9 +101,7 @@
 
 .modal-content {
     background-color: #ffffff;
-    /* fondo claro */
     color: #222;
-    /* 🔥 texto oscuro para contraste */
     padding: 1.5rem;
     max-width: 500px;
     width: 90%;
@@ -114,13 +109,11 @@
     position: relative;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    /* mejora visual */
 }
 
 .modal-content h2,
 .modal-content p {
     color: #222;
-    /* fuerza contraste correcto */
 }
 
 .modal-content img {
@@ -140,13 +133,11 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: #222;
-    /* contraste sobre blanco */
     cursor: pointer;
 }
 
 #close-modal:hover {
     color: #e63946;
-    /* feedback visual */
 }
 
 /* ===============================
@@ -162,6 +153,7 @@
     text-align: center;
 }
 
+/* Imagen */
 .hero img {
     width: 100%;
     height: auto;
@@ -169,14 +161,17 @@
     border-radius: 8px;
 }
 
+/* Overlay oscuro */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 8px;
+    z-index: 1;   
 }
 
+/* Texto */
 .hero-content {
     position: absolute;
     top: 50%;
@@ -185,6 +180,7 @@
     color: #ffffff;
     max-width: 800px;
     padding: 0 1rem;
+    z-index: 2; 
 }
 
 .hero-content h1 {
