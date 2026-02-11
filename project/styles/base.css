@@ -53,7 +53,6 @@ nav ul li {
 
 nav a {
     color: #ffffff;
-    /* ✅ blanco, igual que antes */
     text-decoration: none;
     font-weight: 600;
 }
@@ -96,16 +95,6 @@ a:focus {
 ================================ */
 main {
     padding: 1.5rem;
-}
-
-/* ===============================
-   Hero content contrast fix
-================================ */
-.hero-content {
-    background-color: rgba(0, 0, 0, 0.4);
-    /* ✅ fondo semitransparente solo para hero */
-    border-radius: 6px;
-    padding: 1rem;
 }
 
 /* ===============================
