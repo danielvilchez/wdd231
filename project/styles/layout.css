@@ -171,7 +171,6 @@
     z-index: 1;
 }
 
-/* Texto */
 .hero-content {
     position: absolute;
     top: 50%;
@@ -179,8 +178,10 @@
     transform: translate(-50%, -50%);
     color: #ffffff;
     max-width: 800px;
-    padding: 0 1rem;
-    z-index: 2;
+    padding: 1rem;
+    z-index: 2; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-radius: 6px; 
 }
 
 .hero-content h1 {

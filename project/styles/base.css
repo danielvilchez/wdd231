@@ -15,6 +15,7 @@ body {
     line-height: 1.6;
     background-color: #f5f5f5;
     color: #222;
+    /* texto principal sobre fondo claro */
 }
 
 header {
@@ -53,6 +54,7 @@ nav ul li {
 
 nav a {
     color: #ffffff;
+    /* links del nav en blanco sobre fondo oscuro */
     text-decoration: none;
     font-weight: 600;
 }
@@ -74,15 +76,17 @@ nav a.active {
 ================================ */
 a {
     color: #0d1b2a;
+    /* links normales sobre fondo claro */
     text-decoration: none;
 }
 
 a:visited {
-    color: #ffffff;
+    color: #0d1b2a;
 }
 
 a:hover {
     color: #e63946;
+    /* rojo contraste para hover */
 }
 
 a:focus {
