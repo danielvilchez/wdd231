@@ -126,19 +126,6 @@ footer a:focus {
 }
 
 /* ===============================
-   Footer Headings Contrast Fix
-================================ */
-footer h1,
-footer h2,
-footer h3,
-footer h4,
-footer h5,
-footer h6 {
-    color: #ffffff;
-    /* asegura suficiente contraste sobre fondo oscuro */
-}
-
-/* ===============================
    Fix contrast for links on dark backgrounds
 ================================ */
 header a,
