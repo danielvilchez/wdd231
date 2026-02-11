@@ -16,8 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Redirige a form-action.html con los datos en la URL
-        const params = new URLSearchParams({ title, year, genre, message });
-        window.location.href = `form-action.html?${params.toString()}`;
+        // Guardar en Local Storage
+        const suggestion = { title, year, genre, message };
+        localStorage.setItem('movieSuggestion', JSON.stringify(suggestion));
+
+        // Redirige a form-action.html
+        window.location.href = 'form-action.html';
     });
 });

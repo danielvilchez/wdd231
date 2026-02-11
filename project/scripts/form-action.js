@@ -1,18 +1,19 @@
 // scripts/form-action.js
 document.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
     const output = document.getElementById('output');
 
-    if (!params.toString()) {
+    // Obtener datos del Local Storage
+    const suggestionJSON = localStorage.getItem('movieSuggestion');
+
+    if (!suggestionJSON) {
         output.innerHTML = "<p>No form data received.</p>";
-        return;
+    } else {
+        const suggestion = JSON.parse(suggestionJSON);
+        let html = "<ul>";
+        for (const key in suggestion) {
+            html += `<li><strong>${key}:</strong> ${suggestion[key]}</li>`;
+        }
+        html += "</ul>";
+        output.innerHTML = html;
     }
-
-    let html = "<ul>";
-    params.forEach((value, key) => {
-        html += `<li><strong>${key}:</strong> ${decodeURIComponent(value)}</li>`;
-    });
-    html += "</ul>";
-
-    output.innerHTML = html;
 });
