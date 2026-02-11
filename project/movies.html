@@ -21,17 +21,14 @@
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
 
-    <!-- Google Fonts (non render-blocking) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
-
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     </noscript>
-
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/base.css">
@@ -39,9 +36,9 @@
     <link rel="stylesheet" href="styles/responsive.css">
 
     <!-- JS -->
-    <script type="module" src="scripts/main.js"></script>
-    <script type="module" src="scripts/movies.js"></script>
-    <script type="module" src="scripts/weather.js"></script>
+    <script type="module" src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/movies.js" defer></script>
+    <script type="module" src="scripts/weather.js" defer></script>
 </head>
 
 <body class="movies">
@@ -64,17 +61,23 @@
 
             <div class="hero-content">
                 <h1>Movies Collection</h1>
-                <p>
-                    Discover a curated selection of popular movies.
-                    Click on any movie to explore more details.
-                </p>
+                <p>Discover a curated selection of popular movies. Click on any movie to explore more details.</p>
             </div>
         </section>
 
         <!-- Movies Section -->
         <section id="movies-container">
             <h2 class="visually-hidden">Movies Collection</h2>
-            <!-- Movies dynamically generated here -->
+
+            <!-- Primera película inline (LCP detectada) -->
+            <div class="movie-card">
+                <img src="images/godfather.webp" alt="The Godfather poster" width="250" height="375" loading="eager"
+                    fetchpriority="high">
+                <h2>The Godfather</h2>
+                <p><strong>Year:</strong> 1972</p>
+                <p><strong>Genre:</strong> Crime</p>
+                <p><strong>Rating:</strong> 9.2</p>
+            </div>
         </section>
 
         <div class="movies-footer-text">

@@ -7,12 +7,12 @@ async function getMovies() {
     try {
         const response = await fetch('data/movies.json');
 
-        if (!response.ok) {
-            throw new Error('Failed to fetch movies');
-        }
+        if (!response.ok) throw new Error('Failed to fetch movies');
 
         const data = await response.json();
-        displayMovies(data.movies);
+
+        // Llama displayMovies, saltando la primera (ya inline en HTML)
+        displayMovies(data.movies.slice(1));
 
     } catch (error) {
         moviesContainer.innerHTML = `<p>Error loading movies.</p>`;
@@ -21,14 +21,12 @@ async function getMovies() {
 }
 
 function displayMovies(movies) {
-    moviesContainer.innerHTML = '';
-
     movies.forEach(movie => {
         const movieCard = document.createElement('div');
         movieCard.classList.add('movie-card');
 
         movieCard.innerHTML = `
-            <img src="${movie.image}" alt="${movie.title} poster" loading="lazy">
+            <img src="${movie.image}" alt="${movie.title} poster" width="250" height="375" loading="lazy">
             <h2>${movie.title}</h2>
             <p><strong>Year:</strong> ${movie.year}</p>
             <p><strong>Genre:</strong> ${movie.genre}</p>
@@ -42,7 +40,7 @@ function displayMovies(movies) {
 
 function openModal(movie) {
     modalDetails.innerHTML = `
-        <img src="${movie.image}" alt="${movie.title} poster" loading="lazy">
+        <img src="${movie.image}" alt="${movie.title} poster" width="250" height="375" loading="lazy">
         <h2>${movie.title}</h2>
         <p><strong>Release Year:</strong> ${movie.year}</p>
         <p><strong>Genre:</strong> ${movie.genre}</p>
@@ -57,4 +55,5 @@ closeModalButton.addEventListener('click', () => {
     modal.hidden = true;
 });
 
+// Ejecuta
 getMovies();
