@@ -11,12 +11,23 @@ async function getMovies() {
 
         const data = await response.json();
 
-        // Llama displayMovies, saltando la primera (ya inline en HTML)
+        // Agregamos listener a la primera película inline
+        setupFirstMovie(data.movies[0]);
+
+        // Display resto de películas
         displayMovies(data.movies.slice(1));
 
     } catch (error) {
         moviesContainer.innerHTML = `<p>Error loading movies.</p>`;
         console.error(error);
+    }
+}
+
+// Configura la primera película inline para que abra modal
+function setupFirstMovie(movie) {
+    const firstMovieCard = moviesContainer.querySelector('.movie-card');
+    if (firstMovieCard) {
+        firstMovieCard.addEventListener('click', () => openModal(movie));
     }
 }
 
