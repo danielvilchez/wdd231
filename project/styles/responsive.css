@@ -1,60 +1,91 @@
 /* ===============================
-   Featured & Movies Grid Responsive
-================================ */
+   HERO MOBILE
+=============================== */
 @media (max-width: 768px) {
 
-    #movies-container,
-    #featured-movies {
-        grid-template-columns: 1fr;
-        /* una debajo de otra en móvil */
+    /* Hero */
+    .hero img {
+        height: 300px;
+        /* menor altura para móvil */
     }
 
-    /* ===============================
-       HERO MOBILE FIX
-    ================================= */
     .hero-content {
-        max-width: 90%;
-        /* Que no se salga de los bordes */
-        padding: 1rem;
-        /* Espacio interno */
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        /* Mantener centrado */
+        padding: 2rem 1rem;
     }
 
     .hero-content h1 {
         font-size: 1.8rem;
-        /* Ajusta tamaño del título */
     }
 
     .hero-content p {
         font-size: 1rem;
-        /* Ajusta tamaño del párrafo */
         line-height: 1.4;
-        /* Mejor lectura */
     }
 
     .hero-content .cta-button {
         font-size: 0.95rem;
-        /* Botón más compacto */
         padding: 0.5rem 1rem;
+    }
+
+    /* Movies & Featured Movies Grid */
+    #movies-container,
+    #featured-movies {
+        grid-template-columns: 1fr;
+        /* 1 card por fila */
+        gap: 1rem;
     }
 }
 
+/* ===============================
+   HERO TABLET
+=============================== */
 @media (min-width: 769px) and (max-width: 1024px) {
 
+    /* Hero */
+    .hero img {
+        height: 360px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.05rem;
+    }
+
+    /* Movies & Featured Movies Grid */
     #movies-container,
     #featured-movies {
         grid-template-columns: repeat(2, 1fr);
-        /* dos columnas en tablet */
+        /* 2 cards por fila */
+        gap: 1.5rem;
     }
 }
 
+/* ===============================
+   HERO DESKTOP
+=============================== */
 @media (min-width: 1025px) {
 
+    /* Hero */
+    .hero img {
+        height: 420px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    /* Movies & Featured Movies Grid */
     #movies-container,
     #featured-movies {
         grid-template-columns: repeat(4, 1fr);
-        /* desktop */
+        /* 4 cards por fila */
+        gap: 1.5rem;
     }
 }
