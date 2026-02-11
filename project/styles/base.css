@@ -17,9 +17,6 @@ body {
     color: #222;
 }
 
-/* ===============================
-   Header
-================================ */
 header {
     background-color: #0d1b2a;
     padding: 1rem;
@@ -74,29 +71,17 @@ nav a.active {
     cursor: pointer;
 }
 
-/* ===============================
-   Global Links
-   (Fix for "Video Demonstration"
-   turning purple after visited)
-================================ */
-
-/* 
-   Browsers make visited links purple by default.
-   We override that behavior to keep a consistent,
-   accessible color across the site.
-*/
 a {
-    color: #0d1b2a;
+    color: #0d1b2a;        
     text-decoration: none;
 }
 
 a:visited {
-    color: #0d1b2a;
-    /* Keep same color to prevent purple visited links */
+    color: #ffffff;       
 }
 
 a:hover {
-    color: #e63946;
+    color: #ff0015;        
 }
 
 a:focus {
@@ -104,17 +89,6 @@ a:focus {
     outline-offset: 2px;
 }
 
-/* ===============================
-   Footer Links (Dark Background)
-================================ */
-footer a,
-footer a:visited {
-    color: #ffffff;
-}
-
-footer a:hover {
-    color: #e63946;
-}
 
 /* ===============================
    Layout
