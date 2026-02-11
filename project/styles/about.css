@@ -1,0 +1,37 @@
+/* ===============================
+   About Page Sections
+================================ */
+.about .info-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about .info-section h2 {
+    font-size: 1.8rem;
+    color: #0d1b2a;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about .info-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #222222;
+    text-align: justify;
+}
+
+.about .info-section ul {
+    list-style: disc inside;
+    padding-left: 0;
+    color: #222222;
+    line-height: 1.6;
+}
+
+.about .info-section ul li {
+    margin-bottom: 0.6rem;
+    padding-left: 0.5rem;
+}

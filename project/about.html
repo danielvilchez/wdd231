@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Explorer | About</title>
+    <meta name="description" content="Learn more about Movie Explorer and its features.">
+    <meta name="author" content="Daniel Vilchez">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/about.css"> <!-- estilos específicos para la página About -->
+
+    <!-- JS Modules -->
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/featured.js"></script>
+    <script type="module" src="scripts/weather.js"></script>
+</head>
+
+<body class="about">
+    <header>
+        <nav>
+            <button id="menu-button" aria-label="Open navigation menu">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="suggest.html">Suggest a Movie</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero.webp" alt="Movie collage" width="1200" height="600" loading="eager"
+                fetchpriority="high">
+            <div class="hero-content">
+                <h1>About Movie Explorer</h1>
+                <p>Movie Explorer is a project that allows users to browse popular movies, check ratings, explore
+                    genres, and suggest new films to be added. This project demonstrates responsive design, dynamic
+                    JavaScript features, and accessibility best practices.</p>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>Features</h2>
+            <ul>
+                <li>Browse a curated list of popular movies</li>
+                <li>View detailed movie information in modals</li>
+                <li>Submit suggestions for new movies via a form</li>
+                <li>Dynamic content loaded from JSON data</li>
+                <li>Weather info included in the footer for fun</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h2>About the Developer</h2>
+            <p>Hi! Im Daniel Vilchez, and this project was created for the WDD231 course at BYU. It demonstrates the
+                use of HTML, CSS, and JavaScript, including asynchronous data fetching, DOM manipulation, local storage,
+                and modular JS.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2026 | Daniel Vilchez | WDD231</p>
+                <p><a href="https://youtu.be/bu9ciy_XAYY">Video Demonstration</a></p>
+            </div>
+
+            <div class="footer-weather">
+                <h3>Weather in Lima</h3>
+                <p id="current-weather">Loading weather...</p>
+                <ul id="forecast"></ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
