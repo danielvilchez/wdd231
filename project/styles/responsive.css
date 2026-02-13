@@ -1,12 +1,11 @@
 /* ===============================
-   HERO MOBILE
+   MOBILE (0px - 768px)
 =============================== */
 @media (max-width: 768px) {
 
     /* Hero */
     .hero img {
         height: 300px;
-        /* menor altura para móvil */
     }
 
     .hero-content {
@@ -31,15 +30,34 @@
     #movies-container,
     #featured-movies {
         grid-template-columns: 1fr;
-        /* 1 card por fila */
         gap: 1rem;
     }
 }
 
+
 /* ===============================
-   HERO TABLET
+   TABLET (769px - 1024px)
 =============================== */
 @media (min-width: 769px) and (max-width: 1024px) {
+
+    /* ===== Navigation Desktop Behavior ===== */
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 0;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-button {
+        display: none;
+    }
 
     /* Hero */
     .hero img {
@@ -58,15 +76,34 @@
     #movies-container,
     #featured-movies {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 cards por fila */
         gap: 1.5rem;
     }
 }
 
+
 /* ===============================
-   HERO DESKTOP
+   DESKTOP (1025px+)
 =============================== */
 @media (min-width: 1025px) {
+
+    /* ===== Navigation Desktop Behavior ===== */
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 0;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-button {
+        display: none;
+    }
 
     /* Hero */
     .hero img {
@@ -85,7 +122,6 @@
     #movies-container,
     #featured-movies {
         grid-template-columns: repeat(4, 1fr);
-        /* 4 cards por fila */
         gap: 1.5rem;
     }
 }
