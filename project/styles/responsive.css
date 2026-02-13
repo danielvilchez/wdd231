@@ -1,5 +1,5 @@
 /* ===============================
-   MOBILE (0px - 768px)
+   HERO MOBILE
 =============================== */
 @media (max-width: 768px) {
 
@@ -34,11 +34,11 @@
     }
 }
 
-
 /* ===============================
-   TABLET (769px - 1024px)
+   HERO TABLET
 =============================== */
 @media (min-width: 769px) and (max-width: 1024px) {
+
     nav {
         justify-content: center;
     }
@@ -78,11 +78,11 @@
     }
 }
 
-
 /* ===============================
-   DESKTOP (1025px+)
+   HERO DESKTOP
 =============================== */
 @media (min-width: 1025px) {
+
     nav {
         justify-content: center;
     }
