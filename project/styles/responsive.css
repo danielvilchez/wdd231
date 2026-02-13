@@ -39,8 +39,6 @@
    TABLET (769px - 1024px)
 =============================== */
 @media (min-width: 769px) and (max-width: 1024px) {
-
-    /* ===== Navigation Desktop Behavior ===== */
     nav {
         justify-content: center;
     }
@@ -85,8 +83,6 @@
    DESKTOP (1025px+)
 =============================== */
 @media (min-width: 1025px) {
-
-    /* ===== Navigation Desktop Behavior ===== */
     nav {
         justify-content: center;
     }
